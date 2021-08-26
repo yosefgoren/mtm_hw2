@@ -23,12 +23,13 @@ ExamDetails::~ExamDetails(){}
 ExamDetails::ExamDetails(const ExamDetails& source): course_number(source.course_number),
     month(source.month), day(source.day), duration(source.duration), zoom_link(source.zoom_link) {}
 
-void ExamDetails::operator=(const ExamDetails& source){
+ExamDetails& ExamDetails::operator=(const ExamDetails& source){
     course_number = source.course_number;
     month = source.month;
     day = source.day;
     duration = source.duration;
     zoom_link = source.zoom_link;
+    return this;
 }
 
 const std::string& ExamDetails::getLink() const{

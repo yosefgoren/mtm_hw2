@@ -17,7 +17,7 @@ namespace mtm{
 
         ~ExamDetails() noexcept;
         ExamDetails(const ExamDetails& source);
-        void operator=(const ExamDetails& source);
+        ExamDetails& operator=(const ExamDetails& source);
         const std::string& getLink() const;
         void setLink(const std::string& new_link);
 
