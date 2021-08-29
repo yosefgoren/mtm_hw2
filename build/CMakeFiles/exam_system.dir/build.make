@@ -56,27 +56,27 @@ include CMakeFiles/exam_system.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/exam_system.dir/flags.make
 
-CMakeFiles/exam_system.dir/main.cpp.obj: CMakeFiles/exam_system.dir/flags.make
-CMakeFiles/exam_system.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exam_system.dir/main.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exam_system.dir\main.cpp.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\main.cpp
+CMakeFiles/exam_system.dir/part_a/main.cpp.obj: CMakeFiles/exam_system.dir/flags.make
+CMakeFiles/exam_system.dir/part_a/main.cpp.obj: ../part_a/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exam_system.dir/part_a/main.cpp.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exam_system.dir\part_a\main.cpp.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_a\main.cpp
 
-CMakeFiles/exam_system.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exam_system.dir/main.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\main.cpp > CMakeFiles\exam_system.dir\main.cpp.i
+CMakeFiles/exam_system.dir/part_a/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exam_system.dir/part_a/main.cpp.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_a\main.cpp > CMakeFiles\exam_system.dir\part_a\main.cpp.i
 
-CMakeFiles/exam_system.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exam_system.dir/main.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\main.cpp -o CMakeFiles\exam_system.dir\main.cpp.s
+CMakeFiles/exam_system.dir/part_a/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exam_system.dir/part_a/main.cpp.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_a\main.cpp -o CMakeFiles\exam_system.dir\part_a\main.cpp.s
 
 # Object files for target exam_system
 exam_system_OBJECTS = \
-"CMakeFiles/exam_system.dir/main.cpp.obj"
+"CMakeFiles/exam_system.dir/part_a/main.cpp.obj"
 
 # External object files for target exam_system
 exam_system_EXTERNAL_OBJECTS =
 
-exam_system.exe: CMakeFiles/exam_system.dir/main.cpp.obj
+exam_system.exe: CMakeFiles/exam_system.dir/part_a/main.cpp.obj
 exam_system.exe: CMakeFiles/exam_system.dir/build.make
 exam_system.exe: CMakeFiles/exam_system.dir/linklibs.rsp
 exam_system.exe: CMakeFiles/exam_system.dir/objects1.rsp

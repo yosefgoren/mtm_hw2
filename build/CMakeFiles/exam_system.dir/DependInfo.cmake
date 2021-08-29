@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/main.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/exam_system.dir/main.cpp.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/main.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/exam_system.dir/part_a/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

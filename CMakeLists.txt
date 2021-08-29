@@ -1,11 +1,3 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(exam_system VERSION 0.1.0)
-
-include(CTest)
-enable_testing()
-
-add_executable(exam_system main.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+add_executable(exam_system part_a/main.cpp)
+add_executable(game part_b/game_test.cpp)
+add_executable(board part_b/board_test.cpp part_b/Auxiliaries.cpp)
