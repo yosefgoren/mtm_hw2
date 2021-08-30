@@ -148,113 +148,98 @@ board/fast:
 	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/build
 .PHONY : board/fast
 
-part_a/main.obj: part_a/main.cpp.obj
-
+# target to build an object file
+part_a/main.obj:
+	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.obj
 .PHONY : part_a/main.obj
 
-# target to build an object file
-part_a/main.cpp.obj:
-	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.cpp.obj
-.PHONY : part_a/main.cpp.obj
-
-part_a/main.i: part_a/main.cpp.i
-
+# target to preprocess a source file
+part_a/main.i:
+	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.i
 .PHONY : part_a/main.i
 
-# target to preprocess a source file
-part_a/main.cpp.i:
-	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.cpp.i
-.PHONY : part_a/main.cpp.i
-
-part_a/main.s: part_a/main.cpp.s
-
+# target to generate assembly for a file
+part_a/main.s:
+	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.s
 .PHONY : part_a/main.s
 
-# target to generate assembly for a file
-part_a/main.cpp.s:
-	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.cpp.s
-.PHONY : part_a/main.cpp.s
-
-part_b/Auxiliaries.obj: part_b/Auxiliaries.cpp.obj
-
+# target to build an object file
+part_b/Auxiliaries.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.obj
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.obj
 .PHONY : part_b/Auxiliaries.obj
 
-# target to build an object file
-part_b/Auxiliaries.cpp.obj:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj
-.PHONY : part_b/Auxiliaries.cpp.obj
-
-part_b/Auxiliaries.i: part_b/Auxiliaries.cpp.i
-
+# target to preprocess a source file
+part_b/Auxiliaries.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.i
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.i
 .PHONY : part_b/Auxiliaries.i
 
-# target to preprocess a source file
-part_b/Auxiliaries.cpp.i:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.cpp.i
-.PHONY : part_b/Auxiliaries.cpp.i
-
-part_b/Auxiliaries.s: part_b/Auxiliaries.cpp.s
-
+# target to generate assembly for a file
+part_b/Auxiliaries.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.s
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.s
 .PHONY : part_b/Auxiliaries.s
 
+# target to build an object file
+part_b/Game.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.obj
+.PHONY : part_b/Game.obj
+
+# target to preprocess a source file
+part_b/Game.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.i
+.PHONY : part_b/Game.i
+
 # target to generate assembly for a file
-part_b/Auxiliaries.cpp.s:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.cpp.s
-.PHONY : part_b/Auxiliaries.cpp.s
+part_b/Game.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.s
+.PHONY : part_b/Game.s
 
-part_b/board_test.obj: part_b/board_test.cpp.obj
+# target to build an object file
+part_b/TIleItem.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.obj
+.PHONY : part_b/TIleItem.obj
 
+# target to preprocess a source file
+part_b/TIleItem.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.i
+.PHONY : part_b/TIleItem.i
+
+# target to generate assembly for a file
+part_b/TIleItem.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.s
+.PHONY : part_b/TIleItem.s
+
+# target to build an object file
+part_b/board_test.obj:
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.obj
 .PHONY : part_b/board_test.obj
 
-# target to build an object file
-part_b/board_test.cpp.obj:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.cpp.obj
-.PHONY : part_b/board_test.cpp.obj
-
-part_b/board_test.i: part_b/board_test.cpp.i
-
+# target to preprocess a source file
+part_b/board_test.i:
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.i
 .PHONY : part_b/board_test.i
 
-# target to preprocess a source file
-part_b/board_test.cpp.i:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.cpp.i
-.PHONY : part_b/board_test.cpp.i
-
-part_b/board_test.s: part_b/board_test.cpp.s
-
+# target to generate assembly for a file
+part_b/board_test.s:
+	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.s
 .PHONY : part_b/board_test.s
 
-# target to generate assembly for a file
-part_b/board_test.cpp.s:
-	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.cpp.s
-.PHONY : part_b/board_test.cpp.s
-
-part_b/game_test.obj: part_b/game_test.cpp.obj
-
+# target to build an object file
+part_b/game_test.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.obj
 .PHONY : part_b/game_test.obj
 
-# target to build an object file
-part_b/game_test.cpp.obj:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.cpp.obj
-.PHONY : part_b/game_test.cpp.obj
-
-part_b/game_test.i: part_b/game_test.cpp.i
-
+# target to preprocess a source file
+part_b/game_test.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.i
 .PHONY : part_b/game_test.i
 
-# target to preprocess a source file
-part_b/game_test.cpp.i:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.cpp.i
-.PHONY : part_b/game_test.cpp.i
-
-part_b/game_test.s: part_b/game_test.cpp.s
-
-.PHONY : part_b/game_test.s
-
 # target to generate assembly for a file
-part_b/game_test.cpp.s:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.cpp.s
-.PHONY : part_b/game_test.cpp.s
+part_b/game_test.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.s
+.PHONY : part_b/game_test.s
 
 # Help Target
 help:
@@ -273,6 +258,12 @@ help:
 	@echo ... part_b/Auxiliaries.obj
 	@echo ... part_b/Auxiliaries.i
 	@echo ... part_b/Auxiliaries.s
+	@echo ... part_b/Game.obj
+	@echo ... part_b/Game.i
+	@echo ... part_b/Game.s
+	@echo ... part_b/TIleItem.obj
+	@echo ... part_b/TIleItem.i
+	@echo ... part_b/TIleItem.s
 	@echo ... part_b/board_test.obj
 	@echo ... part_b/board_test.i
 	@echo ... part_b/board_test.s

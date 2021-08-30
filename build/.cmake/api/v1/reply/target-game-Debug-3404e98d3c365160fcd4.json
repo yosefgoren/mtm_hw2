@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "board.exe"
+			"path" : "game.exe"
 		},
 		{
-			"path" : "board.pdb"
+			"path" : "game.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -38,18 +38,20 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g  "
+					"fragment" : "-g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3
 			]
 		}
 	],
-	"id" : "board::@6890427a1f51a3e7e1df",
+	"id" : "game::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -65,8 +67,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "board",
-	"nameOnDisk" : "board.exe",
+	"name" : "game",
+	"nameOnDisk" : "game.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -79,7 +81,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3
 			]
 		}
 	],
@@ -88,13 +92,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "part_b/board_test.cpp",
+			"path" : "part_b/game_test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "part_b/Auxiliaries.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "part_b/Game.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "part_b/TIleItem.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

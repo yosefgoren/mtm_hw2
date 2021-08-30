@@ -56,42 +56,42 @@ include CMakeFiles/board.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/board.dir/flags.make
 
-CMakeFiles/board.dir/part_b/board_test.cpp.obj: CMakeFiles/board.dir/flags.make
-CMakeFiles/board.dir/part_b/board_test.cpp.obj: ../part_b/board_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/board.dir/part_b/board_test.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\board.dir\part_b\board_test.cpp.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp
+CMakeFiles/board.dir/part_b/board_test.obj: CMakeFiles/board.dir/flags.make
+CMakeFiles/board.dir/part_b/board_test.obj: ../part_b/board_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/board.dir/part_b/board_test.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\board.dir\part_b\board_test.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp
 
-CMakeFiles/board.dir/part_b/board_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/board.dir/part_b/board_test.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp > CMakeFiles\board.dir\part_b\board_test.cpp.i
+CMakeFiles/board.dir/part_b/board_test.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/board.dir/part_b/board_test.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp > CMakeFiles\board.dir\part_b\board_test.i
 
-CMakeFiles/board.dir/part_b/board_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/board.dir/part_b/board_test.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp -o CMakeFiles\board.dir\part_b\board_test.cpp.s
+CMakeFiles/board.dir/part_b/board_test.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/board.dir/part_b/board_test.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\board_test.cpp -o CMakeFiles\board.dir\part_b\board_test.s
 
-CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj: CMakeFiles/board.dir/flags.make
-CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj: ../part_b/Auxiliaries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\board.dir\part_b\Auxiliaries.cpp.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp
+CMakeFiles/board.dir/part_b/Auxiliaries.obj: CMakeFiles/board.dir/flags.make
+CMakeFiles/board.dir/part_b/Auxiliaries.obj: ../part_b/Auxiliaries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/board.dir/part_b/Auxiliaries.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\board.dir\part_b\Auxiliaries.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp
 
-CMakeFiles/board.dir/part_b/Auxiliaries.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/board.dir/part_b/Auxiliaries.cpp.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp > CMakeFiles\board.dir\part_b\Auxiliaries.cpp.i
+CMakeFiles/board.dir/part_b/Auxiliaries.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/board.dir/part_b/Auxiliaries.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp > CMakeFiles\board.dir\part_b\Auxiliaries.i
 
-CMakeFiles/board.dir/part_b/Auxiliaries.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/board.dir/part_b/Auxiliaries.cpp.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp -o CMakeFiles\board.dir\part_b\Auxiliaries.cpp.s
+CMakeFiles/board.dir/part_b/Auxiliaries.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/board.dir/part_b/Auxiliaries.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Auxiliaries.cpp -o CMakeFiles\board.dir\part_b\Auxiliaries.s
 
 # Object files for target board
 board_OBJECTS = \
-"CMakeFiles/board.dir/part_b/board_test.cpp.obj" \
-"CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj"
+"CMakeFiles/board.dir/part_b/board_test.obj" \
+"CMakeFiles/board.dir/part_b/Auxiliaries.obj"
 
 # External object files for target board
 board_EXTERNAL_OBJECTS =
 
-board.exe: CMakeFiles/board.dir/part_b/board_test.cpp.obj
-board.exe: CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj
+board.exe: CMakeFiles/board.dir/part_b/board_test.obj
+board.exe: CMakeFiles/board.dir/part_b/Auxiliaries.obj
 board.exe: CMakeFiles/board.dir/build.make
 board.exe: CMakeFiles/board.dir/linklibs.rsp
 board.exe: CMakeFiles/board.dir/objects1.rsp

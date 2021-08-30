@@ -16,8 +16,8 @@ namespace mtm{
      *  std::ostream& operator<<(std::ostream& os) const -- expects output to be a single char.
      */
     class Board{
-    public:
-        Board(unsigned int num_rows, unsigned int num_cols, const T& default_value):
+    protected:
+        Board(int num_rows, int num_cols, const T& default_value):
                 num_rows(num_rows), num_cols(num_cols), items_array(nullptr){
             if(num_rows <= 0 || num_cols <= 0){
                 throw IllegalArgument();
@@ -27,6 +27,7 @@ namespace mtm{
                 item = T(default_value);
             }
         }
+    public:
         ~Board(){
             dealloate();
         }
@@ -48,6 +49,7 @@ namespace mtm{
             return *this;
         }
 
+    protected:
         bool positionWithinBoard(const GridPoint& coordiantes){
             int col = coordiantes.col, row = coordiantes.row;
             if(col < 0 || row < 0){
@@ -56,17 +58,16 @@ namespace mtm{
             return col < num_cols && row < num_rows;
         }
 
-        T& operator()(const GridPoint& coordiantes){
-            return items_array[toLinearPosition(coordiantes)];
-        }
-        const T& operator()(const GridPoint& coordiantes) const{
-            return items_array[toLinearPosition(coordiantes)];
-        }
-
-        T& operator()(unsigned int row, unsigned int col){
+        T& operator()(int row, int col){
+            if(!positionWithinBoard(GridPoint(row, col))){
+                throw IllegalCell();
+            }
             return items_array[toLinearPosition(GridPoint(row, col))];
         }
-        const T& operator()(unsigned int row, unsigned int col) const{
+        const T& operator()(int row, int col) const{
+            if(!positionWithinBoard(GridPoint(row, col))){
+                throw IllegalCell();
+            }
             return items_array[toLinearPosition(GridPoint(row, col))];
         }
 
@@ -81,7 +82,7 @@ namespace mtm{
                 index++;
                 return *this;
             }
-            unsigned int index;
+            int index;
             Board* board;
         };  
         iterator begin(){
@@ -104,7 +105,7 @@ namespace mtm{
                 index++;
                 return *this;
             }
-            unsigned int index;
+            int index;
             const Board* board;
         };  
         const_iterator begin() const{
@@ -116,12 +117,12 @@ namespace mtm{
             return it;
         }
 
-        unsigned getWidth() const{
+        int getWidth() const{
             return num_cols;
         }
 
     private:
-        unsigned int num_rows, num_cols;
+        int num_rows, num_cols;
         T* items_array;
 
         template<class S>
@@ -147,6 +148,8 @@ namespace mtm{
         int toLinearPosition(const GridPoint& coordianets){
             return coordianets.row*num_cols + coordianets.col;
         }
+        template <class S>
+        friend std::ostream& operator<<(std::ostream& os, const Board<S>& board);
     };
 
     template <class T>

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/board.dir/part_b/board_test.cpp.obj"
-  "CMakeFiles/board.dir/part_b/Auxiliaries.cpp.obj"
+  "CMakeFiles/board.dir/part_b/board_test.obj"
+  "CMakeFiles/board.dir/part_b/Auxiliaries.obj"
   "board.pdb"
   "board.exe"
   "board.exe.manifest"
