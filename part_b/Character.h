@@ -4,8 +4,16 @@
 namespace mtm{
     class Character{
         public:
-        Character* clone() const;
+        virtual Character* clone() const = 0;
+        friend std::ostream& operator<<(std::ostream& os, const Character& character);
+        private:
+        virtual char getSymbol() const noexcept = 0;
     };
+    std::ostream& operator<<(std::ostream& os, const Character& character){
+        os << character.getSymbol();
+        return os;
+    }
 }
+
 
 #endif

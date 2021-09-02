@@ -34,8 +34,8 @@ namespace mtm{
         Board(const Board& other):
                 num_rows(other.num_rows), num_cols(other.num_cols), items_array(nullptr){
             items_array = new T[num_rows*num_cols];
-            for(Board::iterator it : *this){
-                *it = T(other(it.position));
+            for(Board::iterator it = this->begin(); it != this->end(); ++it){
+                *it = T(other(it.index));
             }
         }
         /**
@@ -59,16 +59,34 @@ namespace mtm{
         }
 
         T& operator()(int row, int col){
-            if(!positionWithinBoard(GridPoint(row, col))){
-                throw IllegalCell();
-            }
-            return items_array[toLinearPosition(GridPoint(row, col))];
+            return (*this)(GridPoint(row, col));
         }
         const T& operator()(int row, int col) const{
-            if(!positionWithinBoard(GridPoint(row, col))){
+            return (*this)(GridPoint(row, col));
+        }
+        T& operator()(const GridPoint& point){
+            if(!positionWithinBoard(point)){
                 throw IllegalCell();
             }
-            return items_array[toLinearPosition(GridPoint(row, col))];
+            return items_array[toLinearPosition(point)];
+        }
+        const T& operator()(const GridPoint& point) const{
+            if(!positionWithinBoard(point)){
+                throw IllegalCell();
+            }
+            return items_array[toLinearPosition(point)];
+        }
+        T& operator()(int index){
+            if(index < 0 || index >= num_cols*num_rows){
+                throw IllegalCell();
+            }
+            return items_array[index];
+        }
+        const T& operator()(int index) const{
+            if(index < 0 || index >= num_cols*num_rows){
+                throw IllegalCell();
+            }
+            return items_array[index];
         }
 
         struct iterator{

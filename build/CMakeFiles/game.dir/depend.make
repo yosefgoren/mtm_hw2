@@ -10,6 +10,7 @@ CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Character.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Exceptions.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Game.cpp
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Game.h
+CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Soldier.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/TileItem.h
 
 CMakeFiles/game.dir/part_b/TIleItem.obj: ../part_b/Character.h
