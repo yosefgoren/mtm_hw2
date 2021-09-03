@@ -6,132 +6,173 @@
 #include<iostream>
 #include<assert.h>
 
-typedef int T; 
+template<class T>
+class SortedList;
 
-    class List{ //internal class
-        public:
+
+    template<class T>
+    class List{  //Internal Class
+        private:
         T data;
         List* next;
         List* prev;
-        friend class SortedList;
-        friend void cloneList(const List* source_list ,List* dest_list, int size);
+        friend class SortedList<T>;
+        
+        public:
         List();
         ~List() = default; //unsure if default destructor is enough
+
+        /** Getters/Setters */
+        T     getData() const;
+        List* getNext() const;
+        List* getPrev() const;
         void setData(T input); 
-        T getData() const;
+        void setNext(List* input);
+        void setPrev(List* input);
     };
 
+    template<class T>
+    List<T>::List() : data(0), next(NULL), prev(NULL) {}
 
-    void List::setData(T input){
-        this->data = input;
-    }
-
-    T List::getData() const{
+    /**===Getters===*/
+    template<class T>
+    T List<T>::getData() const{
         return data;
     }
+    template<class T>
+    List<T>* List<T>::getNext() const{
+        return this->next;
+    }
+    template<class T>
+    List<T>* List<T>::getPrev() const{
+        return this->prev;
+    }  
+    /**===Setters===*/
+    template<class T>
+    void List<T>::setData(T input){
+        this->data = input;
+    }
+    template<class T>
+    void List<T>::setNext(List* input){
+        next = input;
+    }
+    template<class T>
+    void List<T>::setPrev(List* input){
+        prev = input;
+    }
 
-
-
-List::List() : data(0), next(NULL), prev(NULL) {}
-
-// List::~List(){ //i was unable to build a working List destructor
-//     List* current_node  = this; //segmentation fault
-//     while(current_node){
-//         List* next_node = current_node->next;
-//         delete current_node;
-//         List* current = next_node;
-//     }
-// }
-
-
-class SortedList{
-    private:
-    List* list_head;
-    unsigned int size;
-    public:
-        SortedList();
-        ~SortedList() = default;
-        SortedList(const SortedList& source);
-        unsigned int length() const;
-        SortedList& operator=(const SortedList& source);
-        void insert(const T& new_item);
-        void printList();//debugging purposes only
-        
-        // SortedList& remove( SortedList::iterator it);
-        // SortedList filter{std::function<bool(const T&)> predicate);
-        // template <class R>
-        // SortedList<R> apply(std::function<R(const T&)> mapper);
-
-        // SortedList::iterator begin() const;
-        // SortedList::iterator end() const;
-        // class iterator;
-        // class const_iterator;
-};
-
-SortedList::SortedList() : list_head(new List()), size(0) {} 
-
-void cloneList(const List* source_list ,List* dest_list, int size){
+    template<class T>
+    void cloneList(const List<T>* source_list ,List<T>* dest_list, int size){
     for(int i = 0 ; i < size; i++){
                 //copy current data
-                dest_list->data = source_list->data; 
+                dest_list->setData(source_list->getData()); 
                 //create and link next Node
                 if(i != size-1 ){
-                List* newNode = new List();
-                newNode->prev = dest_list;
-                dest_list->next = newNode;
+                List<T>* newNode = new List<T>();
+                newNode->setPrev(dest_list);
+                dest_list->setNext(newNode);
                 }
                 //iterate
-                source_list = source_list->next;
-                dest_list = dest_list->next;
+                source_list = source_list->getNext();
+                dest_list = dest_list->getNext();
             }
-}
+    }
 
-SortedList::SortedList(const SortedList& source) : list_head(new List()), size(source.size) {
+    template<class T>
+    static List<T>* getNodeBefore( List<T>* list_ptr, T new_item){
+    List<T>* current = list_ptr;
+    List<T>* previous = NULL;
+    while(current != NULL 
+        && current->getData() < new_item){
+        previous = current;
+        current = current->getNext();
+    }
+    return previous;
+    }
+
+
+
+template<class T>
+class SortedList{
+    private:
+    List<T>* list_head;
+    unsigned int size;
+    bool operator==(const SortedList& other) const; //Internal usage only (unrequired)
+
+    public:
+        SortedList();
+
+        /**===Big three===*/
+        ~SortedList(); //need to build
+        SortedList(const SortedList& source);
+        SortedList& operator=(const SortedList& source);
+
+        unsigned int length() const;
+        void insert(const T& new_item);
+        SortedList& remove( typename SortedList::const_iterator it);
+
+        template<class Predicate>
+        SortedList filter(Predicate c) const;
+        template<class Condition>
+        SortedList apply(Condition c);
+
+        typename SortedList<T>::const_iterator begin() const;
+        typename SortedList<T>::const_iterator end() const;
+        class const_iterator;
+
+        void printList();// Debugging purposes only
+
+};
+
+/**Constructor*/
+template<class T>
+SortedList<T>::SortedList() : list_head(new List<T>()), size(0) {} 
+
+/**===Big three===*/
+template<class T>
+SortedList<T>::~SortedList(){ //need to build
+
+} 
+
+template<class T>
+SortedList<T>::SortedList(const SortedList<T>& source) : 
+list_head(new List<T>()), size(source.size){
 
         cloneList(source.list_head, list_head, size);
         
 }
 
-
-SortedList& SortedList::operator=(const SortedList& source){
+template<class T>
+SortedList<T>& SortedList<T>::operator=(const SortedList<T>& source){
     if(this == &source){
         return *this;
     }
     delete list_head; //unsure of this line
     size = source.size;
-    List* list_head = new List();
+    List<T>* list_head = new List<T>();
     cloneList((source.list_head),list_head , source.size);
     return *this;
 }
 
 
 
-unsigned int SortedList::length() const {
+template<class T>
+unsigned int SortedList<T>::length() const {
     return size;
 }
 
-static List* getNodeBefore( List* list_ptr, T new_item){
-    List* current = list_ptr;
-    List* previous = NULL;
-    while(current != NULL 
-        && current->getData() < new_item){
-        previous = current;
-        current = current->next;
-    }
-    return previous;
-}
 
-
-void SortedList::insert(const T& new_item){
-    if(size == 0){ //empty list
+template<class T>
+void SortedList<T>::insert(const T& new_item){
+    if(size == 0){ //empty list case
         this->list_head->data = new_item;
         size++;
         return;
     }
-    List* new_node = new List(); 
+    List<T>* new_node = new List<T>(); 
     new_node->data = new_item;
 
-    List* node_before = getNodeBefore( list_head, new_item);
+    List<T>* node_before = getNodeBefore( list_head, new_item);
 
     if(node_before == NULL){
         new_node->next = list_head;
@@ -139,7 +180,7 @@ void SortedList::insert(const T& new_item){
         list_head = list_head->prev;
        size++;
     } else {
-        List* node_after = node_before->next;
+        List<T>* node_after = node_before->next;
         if(node_after != NULL){
             node_after->prev = new_node;
         }
@@ -152,8 +193,69 @@ void SortedList::insert(const T& new_item){
     
 }
 
-void SortedList::printList() {
-        List* ptr = list_head;
+
+
+
+template<class T>
+SortedList<T>& SortedList<T>::remove( typename SortedList<T>::const_iterator it){
+List<T>* node_before = getNodeBefore<T>(list_head , *it);
+
+}
+
+template<class T>
+template<class Predicate>
+SortedList<T> SortedList<T>::filter(Predicate c) const{
+    SortedList<T> result = new SortedList<T>;
+    for(typename SortedList<T>::const_iterator it = begin(); it != end(); ++it){
+        if (c(*it)) { 
+           result.insert(*it); 
+        }      
+    }
+    return result;
+}
+
+template<class T>
+template<class Condition>
+SortedList<T> SortedList<T>::apply(Condition c){
+    SortedList<T> result = new SortedList<T>;
+    for(typename SortedList<T>::const_iterator it = begin(); it != end(); ++it){
+        T applied = Condition(*it);
+        result.insert(&applied);
+    }
+    return result;
+}
+
+template<class T>
+typename SortedList<T>::const_iterator SortedList<T>::begin() const {
+    return(const_iterator(this, 0));
+}
+
+template<class T>
+typename SortedList<T>::const_iterator SortedList<T>::end() const {
+    return(const_iterator(this, size));
+}
+
+
+template<class T>
+bool SortedList<T>::operator==(const SortedList& other) const{
+    if(size != other.size){
+        return false;
+    }
+    List<T>* list1_ptr = list_head;
+    List<T>* list2_ptr = other->list_head;
+    while(list1_ptr != NULL){
+        if(list1_ptr->data != list2_ptr->data){
+            return false;
+        }
+        list1_ptr = list1_ptr->next;
+        list2_ptr = list2_ptr->next;
+    }
+    return true;
+}
+
+template<class T>
+void SortedList<T>::printList() {
+        List<T>* ptr = list_head;
         while(ptr != NULL){
             std::cout << ptr->data << " , " ;
             ptr = ptr->next;
@@ -162,6 +264,71 @@ void SortedList::printList() {
     }
 
 
+template<class T>
+class SortedList<T>::const_iterator {
+
+    private:
+
+    const SortedList<T>* sorted_list;
+    int index;
+    const_iterator(const SortedList<T>* sorted_list, int index); 
+    friend class SortedList<T>;
+
+    public:
+    /**===Big three===*/
+    ~const_iterator(); //need to build
+    const_iterator(const const_iterator& source); 
+    const_iterator& operator=(const const_iterator& source); 
+
+    /**===Overloaded Operators===*/
+    const_iterator& operator++(); 
+    bool operator==(const const_iterator& it) const; 
+    const T& operator*();
+};
+
+/**Internal Constructor*/
+template <class T>
+SortedList<T>::const_iterator::const_iterator(const SortedList<T>* sorted_list, int index) :
+sorted_list(sorted_list), index(index) {}
+
+/**Copy Constructor*/
+template<class T>
+SortedList<T>::const_iterator::const_iterator(const const_iterator& source) :
+ sorted_list(SortedList<T>(source.sorted_list)) , index(source.index) {}
+
+/**Assigment operator*/
+template<class T>
+typename SortedList<T>::const_iterator& 
+SortedList<T>::const_iterator::operator=(const const_iterator& source){
+    index = source.index;
+    *sorted_list = *(source.sorted_list);
+}
+
+template<class T>
+typename SortedList<T>::const_iterator& 
+SortedList<T>::const_iterator::operator++(){
+    sorted_list->list_head = sorted_list->list_head->next;
+    ++index;
+    return *this;
+}
+
+template<class T>
+bool SortedList<T>::const_iterator::operator==(const const_iterator& it) const{
+    assert(sorted_list == it.sorted_list);
+    return (index == it->index);
+}
+
+template<class T>
+const T& SortedList<T>::const_iterator::operator*(){
+  if( index < 0 || index > sorted_list->length){
+      throw std::out_of_range;
+  }  
+  List<T>* list_ptr = list_head;
+  for(int i = 0; i < index; i++){
+      list_ptr = list_ptr->next;
+  }
+  return(list_ptr->data);
+}
 
 
 #endif
