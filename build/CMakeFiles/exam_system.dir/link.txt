@@ -1,3 +1,0 @@
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E remove -f CMakeFiles\exam_system.dir/objects.a
-C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\exam_system.dir/objects.a @CMakeFiles\exam_system.dir\objects1.rsp
-C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\exam_system.dir/objects.a -Wl,--no-whole-archive  -o exam_system.exe -Wl,--out-implib,libexam_system.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\exam_system.dir\linklibs.rsp

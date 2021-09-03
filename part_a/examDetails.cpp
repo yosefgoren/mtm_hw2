@@ -7,8 +7,9 @@ static bool isValidHour(double hour){
     if(hour < 0){
         return false;
     }
-    double intpart;
-    if( std::modf(hour, &intpart) != ExamDetails::HALF_HOUR ){
+    double int_part;
+    double fraction = std::modf(hour, &int_part);
+    if( fraction != ExamDetails::HALF_HOUR && fraction != 0){
         return false;
     }
     return true;
@@ -17,7 +18,7 @@ static bool isValidHour(double hour){
 
 ExamDetails::ExamDetails(int course_number, unsigned int month, unsigned int day,
     double hour, unsigned int duration, std::string zoom_link): course_number(course_number),
-    month(month), day(day), duration(duration), zoom_link(zoom_link) {
+    month(month), day(day), hour(hour),duration(duration), zoom_link(zoom_link) {
     if(month < MIN_MONTH || month > MAX_MONTH || day < MIN_DAY || day > MAX_DAY){
         throw InvalidDateException();
     }
@@ -29,7 +30,7 @@ ExamDetails::ExamDetails(int course_number, unsigned int month, unsigned int day
 ExamDetails::~ExamDetails(){}
 
 ExamDetails::ExamDetails(const ExamDetails& source): course_number(source.course_number),
-    month(source.month), day(source.day), duration(source.duration), zoom_link(source.zoom_link) {}
+    month(source.month), day(source.day), hour(source.hour), duration(source.duration), zoom_link(source.zoom_link) {}
 
 ExamDetails& ExamDetails::operator=(const ExamDetails& source){
     if (this == &source){
@@ -68,9 +69,10 @@ ExamDetails ExamDetails::makeMatamExam(){
 }
 
 std::string ExamDetails::hourToString(double hour){
-    unsigned int hour_halfs = std::nearbyint(hour*2);
-    std::string result = std::to_string(hour_halfs/2);
+    double int_part;
+    double fraction = std::modf(hour, &int_part);
+    std::string result = std::to_string((int)int_part);
     result += ":";
-    result += hour_halfs%2 ? "00" : "30";
+    result += (fraction == ExamDetails::HALF_HOUR ? "30" : "00");
     return result;
 }

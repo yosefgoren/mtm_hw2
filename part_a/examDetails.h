@@ -1,5 +1,5 @@
-#ifndef EXAM_DETAILS
-#define EXAM_DETAILS
+#ifndef EXAM_DETAILS_H
+#define EXAM_DETAILS_H
 
 #include <string>
 #include <exception>
@@ -14,6 +14,7 @@ namespace mtm{
 
     class ExamDetails{  
     public:
+        ExamDetails() = default;
         ExamDetails(int course_number, unsigned int month, unsigned int day,
             double hour, unsigned int duration, std::string zoom_link = "");
 
@@ -26,7 +27,6 @@ namespace mtm{
         const std::string& getLink() const;
         void setLink(const std::string& new_link);
         int operator-(const ExamDetails& other) const;
-        friend ostream& operator<<(ostream& os, const ExamDetails& details);
         static ExamDetails makeMatamExam(); 
 
         static constexpr unsigned int MIN_MONTH = 1;
@@ -44,12 +44,14 @@ namespace mtm{
         std::string zoom_link;
 
         static std::string hourToString(double hour);
+        friend ostream& operator<<(ostream& os, const ExamDetails& details);
+
     };
 
-    bool operator<(const ExamDetails& first, const ExamDetails& second);
+    // bool operator<(const ExamDetails& first, const ExamDetails& second);
 
     ostream& operator<<(ostream& os, const ExamDetails& details)
-    { //unable to place func outside header file
+    { 
         os << "Course Number: " <<  details.course_number << endl;
         os << "Time: " << details.day << "." << details.month << " at " 
         << ExamDetails::hourToString(details.hour) << endl; 

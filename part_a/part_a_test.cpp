@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include "sortedList.h"
-#include "examDetails.h"
+#include "examDetails.cpp"
 
 using std::cout;
 using std::endl;
@@ -22,7 +22,7 @@ bool isTrollLink(const ExamDetails& exam) {
 }
 
 template<class T>
-void printList(SortedList<T> list) {
+void printList(SortedList<T>& list) {
     for (auto it = list.begin(); !(it == list.end()); ++it) {
         cout << *it << endl;
     }
@@ -76,7 +76,7 @@ int main()
     printList(lst3);
 
     TEST("1.8")
-    lst3 = lst3.apply(getLen);
+    lst3 = lst3.apply<string>(getLen);//added <string>
     printList(lst3);
 
 
