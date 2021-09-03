@@ -182,6 +182,21 @@ part_b/Auxiliaries.s:
 .PHONY : part_b/Auxiliaries.s
 
 # target to build an object file
+part_b/Character.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.obj
+.PHONY : part_b/Character.obj
+
+# target to preprocess a source file
+part_b/Character.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.i
+.PHONY : part_b/Character.i
+
+# target to generate assembly for a file
+part_b/Character.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.s
+.PHONY : part_b/Character.s
+
+# target to build an object file
 part_b/Game.obj:
 	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.obj
 .PHONY : part_b/Game.obj
@@ -197,19 +212,64 @@ part_b/Game.s:
 .PHONY : part_b/Game.s
 
 # target to build an object file
-part_b/TIleItem.obj:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.obj
-.PHONY : part_b/TIleItem.obj
+part_b/Medic.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.obj
+.PHONY : part_b/Medic.obj
 
 # target to preprocess a source file
-part_b/TIleItem.i:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.i
-.PHONY : part_b/TIleItem.i
+part_b/Medic.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.i
+.PHONY : part_b/Medic.i
 
 # target to generate assembly for a file
-part_b/TIleItem.s:
-	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.s
-.PHONY : part_b/TIleItem.s
+part_b/Medic.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.s
+.PHONY : part_b/Medic.s
+
+# target to build an object file
+part_b/Sniper.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.obj
+.PHONY : part_b/Sniper.obj
+
+# target to preprocess a source file
+part_b/Sniper.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.i
+.PHONY : part_b/Sniper.i
+
+# target to generate assembly for a file
+part_b/Sniper.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.s
+.PHONY : part_b/Sniper.s
+
+# target to build an object file
+part_b/Soldier.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.obj
+.PHONY : part_b/Soldier.obj
+
+# target to preprocess a source file
+part_b/Soldier.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.i
+.PHONY : part_b/Soldier.i
+
+# target to generate assembly for a file
+part_b/Soldier.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.s
+.PHONY : part_b/Soldier.s
+
+# target to build an object file
+part_b/TileItem.obj:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TileItem.obj
+.PHONY : part_b/TileItem.obj
+
+# target to preprocess a source file
+part_b/TileItem.i:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TileItem.i
+.PHONY : part_b/TileItem.i
+
+# target to generate assembly for a file
+part_b/TileItem.s:
+	$(MAKE) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TileItem.s
+.PHONY : part_b/TileItem.s
 
 # target to build an object file
 part_b/board_test.obj:
@@ -258,12 +318,24 @@ help:
 	@echo ... part_b/Auxiliaries.obj
 	@echo ... part_b/Auxiliaries.i
 	@echo ... part_b/Auxiliaries.s
+	@echo ... part_b/Character.obj
+	@echo ... part_b/Character.i
+	@echo ... part_b/Character.s
 	@echo ... part_b/Game.obj
 	@echo ... part_b/Game.i
 	@echo ... part_b/Game.s
-	@echo ... part_b/TIleItem.obj
-	@echo ... part_b/TIleItem.i
-	@echo ... part_b/TIleItem.s
+	@echo ... part_b/Medic.obj
+	@echo ... part_b/Medic.i
+	@echo ... part_b/Medic.s
+	@echo ... part_b/Sniper.obj
+	@echo ... part_b/Sniper.i
+	@echo ... part_b/Sniper.s
+	@echo ... part_b/Soldier.obj
+	@echo ... part_b/Soldier.i
+	@echo ... part_b/Soldier.s
+	@echo ... part_b/TileItem.obj
+	@echo ... part_b/TileItem.i
+	@echo ... part_b/TileItem.s
 	@echo ... part_b/board_test.obj
 	@echo ... part_b/board_test.i
 	@echo ... part_b/board_test.s

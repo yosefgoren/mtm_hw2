@@ -4,6 +4,10 @@
 CMakeFiles/game.dir/part_b/Auxiliaries.obj
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/Character.obj
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.cpp
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
 CMakeFiles/game.dir/part_b/Game.obj
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Board.h
@@ -11,11 +15,31 @@ CMakeFiles/game.dir/part_b/Game.obj
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Exceptions.h
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.cpp
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.h
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.h
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
-CMakeFiles/game.dir/part_b/TIleItem.obj
+CMakeFiles/game.dir/part_b/Medic.obj
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
- C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TIleItem.cpp
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.cpp
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
+CMakeFiles/game.dir/part_b/Sniper.obj
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.cpp
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
+CMakeFiles/game.dir/part_b/Soldier.obj
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.cpp
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.h
+CMakeFiles/game.dir/part_b/TileItem.obj
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
+ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
 CMakeFiles/game.dir/part_b/game_test.obj
  C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h

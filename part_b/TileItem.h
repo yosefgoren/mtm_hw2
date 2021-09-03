@@ -11,7 +11,11 @@ namespace mtm{
         TileItem(): character(nullptr){}
         friend std::ostream& operator<<(std::ostream& os, const TileItem& item);
         TileItem& setCharacter(std::shared_ptr<Character> new_character);
+        std::shared_ptr<Character> getCharacter() noexcept;
+        //std::shared_ptr<Character const> getCharacter() const noexcept;
         TileItem& operator=(const TileItem& other);
+        bool tileEmpty() const noexcept;
+        
     private:
         std::shared_ptr<Character> character;
     };

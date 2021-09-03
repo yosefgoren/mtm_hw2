@@ -1,4 +1,4 @@
 add_compile_options(-std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG)
 add_executable(exam_system part_a/main.cpp)
-add_executable(game part_b/game_test.cpp part_b/Auxiliaries.cpp part_b/Game.cpp part_b/TileItem.cpp)
+add_executable(game part_b/game_test.cpp part_b/Auxiliaries.cpp part_b/Game.cpp part_b/TileItem.cpp part_b/Character.cpp part_b/Soldier.cpp part_b/Medic.cpp part_b/Sniper.cpp)
 add_executable(board part_b/board_test.cpp part_b/Auxiliaries.cpp)

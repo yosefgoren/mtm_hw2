@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp
+Auxiliaries.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+iostream
+-
+string
+-
+cmath
+-
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
+iostream
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/iostream
+Auxiliaries.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp
+TileItem.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
+memory
+-
+iostream
+-
+Character.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
+

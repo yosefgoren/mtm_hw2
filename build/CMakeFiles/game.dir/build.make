@@ -95,25 +95,81 @@ CMakeFiles/game.dir/part_b/Game.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/Game.s"
 	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Game.cpp -o CMakeFiles\game.dir\part_b\Game.s
 
-CMakeFiles/game.dir/part_b/TIleItem.obj: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/part_b/TIleItem.obj: ../part_b/TIleItem.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/part_b/TIleItem.obj"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\TIleItem.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TIleItem.cpp
+CMakeFiles/game.dir/part_b/TileItem.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/TileItem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/part_b/TileItem.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\TileItem.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TileItem.cpp
 
-CMakeFiles/game.dir/part_b/TIleItem.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/TIleItem.i"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TIleItem.cpp > CMakeFiles\game.dir\part_b\TIleItem.i
+CMakeFiles/game.dir/part_b/TileItem.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/TileItem.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TileItem.cpp > CMakeFiles\game.dir\part_b\TileItem.i
 
-CMakeFiles/game.dir/part_b/TIleItem.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/TIleItem.s"
-	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TIleItem.cpp -o CMakeFiles\game.dir\part_b\TIleItem.s
+CMakeFiles/game.dir/part_b/TileItem.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/TileItem.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\TileItem.cpp -o CMakeFiles\game.dir\part_b\TileItem.s
+
+CMakeFiles/game.dir/part_b/Character.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/part_b/Character.obj: ../part_b/Character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/part_b/Character.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\Character.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Character.cpp
+
+CMakeFiles/game.dir/part_b/Character.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/Character.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Character.cpp > CMakeFiles\game.dir\part_b\Character.i
+
+CMakeFiles/game.dir/part_b/Character.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/Character.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Character.cpp -o CMakeFiles\game.dir\part_b\Character.s
+
+CMakeFiles/game.dir/part_b/Soldier.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/part_b/Soldier.obj: ../part_b/Soldier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/part_b/Soldier.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\Soldier.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Soldier.cpp
+
+CMakeFiles/game.dir/part_b/Soldier.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/Soldier.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Soldier.cpp > CMakeFiles\game.dir\part_b\Soldier.i
+
+CMakeFiles/game.dir/part_b/Soldier.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/Soldier.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Soldier.cpp -o CMakeFiles\game.dir\part_b\Soldier.s
+
+CMakeFiles/game.dir/part_b/Medic.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/Medic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/part_b/Medic.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\Medic.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Medic.cpp
+
+CMakeFiles/game.dir/part_b/Medic.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/Medic.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Medic.cpp > CMakeFiles\game.dir\part_b\Medic.i
+
+CMakeFiles/game.dir/part_b/Medic.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/Medic.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Medic.cpp -o CMakeFiles\game.dir\part_b\Medic.s
+
+CMakeFiles/game.dir/part_b/Sniper.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/Sniper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/part_b/Sniper.obj"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\part_b\Sniper.obj -c C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Sniper.cpp
+
+CMakeFiles/game.dir/part_b/Sniper.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/part_b/Sniper.i"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Sniper.cpp > CMakeFiles\game.dir\part_b\Sniper.i
+
+CMakeFiles/game.dir/part_b/Sniper.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/part_b/Sniper.s"
+	C:\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\part_b\Sniper.cpp -o CMakeFiles\game.dir\part_b\Sniper.s
 
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/part_b/game_test.obj" \
 "CMakeFiles/game.dir/part_b/Auxiliaries.obj" \
 "CMakeFiles/game.dir/part_b/Game.obj" \
-"CMakeFiles/game.dir/part_b/TIleItem.obj"
+"CMakeFiles/game.dir/part_b/TileItem.obj" \
+"CMakeFiles/game.dir/part_b/Character.obj" \
+"CMakeFiles/game.dir/part_b/Soldier.obj" \
+"CMakeFiles/game.dir/part_b/Medic.obj" \
+"CMakeFiles/game.dir/part_b/Sniper.obj"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -121,12 +177,16 @@ game_EXTERNAL_OBJECTS =
 game.exe: CMakeFiles/game.dir/part_b/game_test.obj
 game.exe: CMakeFiles/game.dir/part_b/Auxiliaries.obj
 game.exe: CMakeFiles/game.dir/part_b/Game.obj
-game.exe: CMakeFiles/game.dir/part_b/TIleItem.obj
+game.exe: CMakeFiles/game.dir/part_b/TileItem.obj
+game.exe: CMakeFiles/game.dir/part_b/Character.obj
+game.exe: CMakeFiles/game.dir/part_b/Soldier.obj
+game.exe: CMakeFiles/game.dir/part_b/Medic.obj
+game.exe: CMakeFiles/game.dir/part_b/Sniper.obj
 game.exe: CMakeFiles/game.dir/build.make
 game.exe: CMakeFiles/game.dir/linklibs.rsp
 game.exe: CMakeFiles/game.dir/objects1.rsp
 game.exe: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

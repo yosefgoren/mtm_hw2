@@ -21,8 +21,28 @@
 },
 {
   "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\TIleItem.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\TIleItem.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TIleItem.cpp"
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\TileItem.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\TileItem.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp"
+},
+{
+  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Character.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Character.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.cpp"
+},
+{
+  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Soldier.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Soldier.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.cpp"
+},
+{
+  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Medic.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Medic.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.cpp"
+},
+{
+  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Sniper.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Sniper.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.cpp"
 },
 {
   "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",

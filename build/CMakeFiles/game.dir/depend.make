@@ -4,18 +4,42 @@
 CMakeFiles/game.dir/part_b/Auxiliaries.obj: ../part_b/Auxiliaries.cpp
 CMakeFiles/game.dir/part_b/Auxiliaries.obj: ../part_b/Auxiliaries.h
 
+CMakeFiles/game.dir/part_b/Character.obj: ../part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/Character.obj: ../part_b/Character.cpp
+CMakeFiles/game.dir/part_b/Character.obj: ../part_b/Character.h
+
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Auxiliaries.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Board.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Character.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Exceptions.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Game.cpp
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Game.h
+CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Medic.h
+CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Sniper.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/Soldier.h
 CMakeFiles/game.dir/part_b/Game.obj: ../part_b/TileItem.h
 
-CMakeFiles/game.dir/part_b/TIleItem.obj: ../part_b/Character.h
-CMakeFiles/game.dir/part_b/TIleItem.obj: ../part_b/TIleItem.cpp
-CMakeFiles/game.dir/part_b/TIleItem.obj: ../part_b/TileItem.h
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/Character.h
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/Medic.cpp
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/Medic.h
+CMakeFiles/game.dir/part_b/Medic.obj: ../part_b/TileItem.h
+
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/Character.h
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/Sniper.cpp
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/Sniper.h
+CMakeFiles/game.dir/part_b/Sniper.obj: ../part_b/TileItem.h
+
+CMakeFiles/game.dir/part_b/Soldier.obj: ../part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/Soldier.obj: ../part_b/Character.h
+CMakeFiles/game.dir/part_b/Soldier.obj: ../part_b/Soldier.cpp
+CMakeFiles/game.dir/part_b/Soldier.obj: ../part_b/Soldier.h
+
+CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/Auxiliaries.h
+CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/Character.h
+CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/TileItem.cpp
+CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/TileItem.h
 
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Auxiliaries.h
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Board.h
