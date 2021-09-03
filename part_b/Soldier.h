@@ -4,15 +4,15 @@
 
 namespace mtm{
     class Soldier : public Character{
-        virtual char getSymbol() const noexcept override{
-            return 'S';
-        }
-        static Soldier* makeSoldier(){
-            return new Soldier();
-        }
-        virtual Character* clone() const override{
-            return new Soldier();
-        }
+    public:
+        Soldier(Team team, units_t health, units_t ammo, units_t range, units_t power);
+        ~Soldier() = default;
+        virtual char getSymbol() const noexcept override;
+        virtual Character* clone() const override;
+        virtual int maxMoveDistance() const noexcept override;
+        virtual bool inAttackRange(const GridPoint& src_point, const GridPoint& dst_point)
+                const noexcept override;
+        virtual bool canAttackTile(TileItem& other) const noexcept override;
     };
 }
 

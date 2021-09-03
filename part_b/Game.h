@@ -7,7 +7,6 @@ namespace mtm{
     class Game : public Board<TileItem>{
     public:
         Game(int height, int width);
-
         void addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character);
         static std::shared_ptr<Character> makeCharacter(CharacterType type, Team team, 
                 units_t health, units_t ammo, units_t range, units_t power);

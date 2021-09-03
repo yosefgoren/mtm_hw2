@@ -12,5 +12,4 @@ public:
 
 int main(int, char**) {
     std::cout << "Hello, world!\n";
-    OneStringPony<"olaaa">::foo();
 }
