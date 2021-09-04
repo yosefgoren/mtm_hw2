@@ -24,7 +24,8 @@ namespace mtm{
     const GridPoint& TileItem::getLocation() const noexcept{
         return current_location;
     }
-    // TileItem& TileItem::setLocation(const GridPoint& new_location) noexcept{
-    //     current_location = new_location;
-    // }
+    TileItem& TileItem::setLocation(const GridPoint& new_location) noexcept{
+        current_location = new_location;
+        return *this;
+    }
 }
