@@ -4,10 +4,15 @@
 #include "Soldier.h"
 #include "Medic.h"
 #include "Sniper.h"
+#include <vector>
 
 using namespace std;
 namespace mtm{
-    Game::Game(int height, int width):Board<TileItem>(height, width, TileItem()){}
+    Game::Game(int height, int width):Board<TileItem>(height, width, TileItem()){
+        for(auto it = this->begin(); it != this->end(); ++it){
+            (*it).setLocation(GridPoint(it));
+        }
+    }
 
     void Game::addCharacter(const GridPoint& coordinates, std::shared_ptr<Character> character){
         (*this)(coordinates).setCharacter(character);
@@ -46,20 +51,28 @@ namespace mtm{
         new_tile.setCharacter(character);
     }
 
-    void Game::attack(const GridPoint& src_coordinates , const GridPoint& dst_coordinates){
-        if(!positionWithinBoard(src_coordinates) || !positionWithinBoard(dst_coordinates)){
-            throw IllegalCell();
-        }
-        TileItem& attacking_tile = (*this)(src_coordinates);
-        if(attacking_tile.tileEmpty()){
-            throw CellEmpty();
-        }
-        shared_ptr<Character> attacker = attacking_tile.getCharacter();
-        if(!attacker->inAttackRange(src_coordinates, dst_coordinates)){
-            throw OutOfRange();
-        }
-        if(attacker.hasAmmoToAttack())
-    }
+    // void Game::attack(const GridPoint& src_coordinates , const GridPoint& dst_coordinates){
+    //     if(!positionWithinBoard(src_coordinates) || !positionWithinBoard(dst_coordinates)){
+    //         throw IllegalCell();
+    //     }
+    //     TileItem& attacking_tile = (*this)(src_coordinates);
+    //     if(attacking_tile.tileEmpty()){
+    //         throw CellEmpty();
+    //     }
+    //     shared_ptr<Character> attacker = attacking_tile.getCharacter();
+    //     if(!attacker->inAttackRange(src_coordinates, dst_coordinates)){
+    //         throw OutOfRange();
+    //     }
+    //     if(!attacker.hasAmmoToAttack()){
+    //         throw OutOfAmmo();
+    //     }
+    //     vector<const GridPoint&> affected_coordiantes = attacker.coordinatesAffectedByAttack(dst_coordinates);
+    //     vector<TileItem&> affected_tiles;
+    //     for(const GridPoint& coordinate : affected_coordiantes){
+    //         affected_tiles.push_back((*this)(coordinate));
+    //     }
+    //     attacker.
+    // }
 
     // void Game::reload(const GridPoint& coordinates);
     // std::ostream& Game::operator<<(std::ostream& os) const;

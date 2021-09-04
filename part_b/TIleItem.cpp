@@ -21,4 +21,10 @@ namespace mtm{
     bool TileItem::tileEmpty() const noexcept{
         return character == nullptr;
     }
+    const GridPoint& TileItem::getLocation() const noexcept{
+        return current_location;
+    }
+    // TileItem& TileItem::setLocation(const GridPoint& new_location) noexcept{
+    //     current_location = new_location;
+    // }
 }

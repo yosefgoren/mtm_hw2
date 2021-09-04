@@ -175,6 +175,43 @@ clean: CMakeFiles/board.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/part_a.dir
+
+# All Build rule for target.
+CMakeFiles/part_a.dir/all:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/depend
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles --progress-num=15,16 "Built target part_a"
+.PHONY : CMakeFiles/part_a.dir/all
+
+# Include target in all.
+all: CMakeFiles/part_a.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part_a.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/part_a.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\pc\Desktop\S4.5\Matam_Take2\hw2\mtm_hw2\build\CMakeFiles 0
+.PHONY : CMakeFiles/part_a.dir/rule
+
+# Convenience name for target.
+part_a: CMakeFiles/part_a.dir/rule
+
+.PHONY : part_a
+
+# clean rule for target.
+CMakeFiles/part_a.dir/clean:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/clean
+.PHONY : CMakeFiles/part_a.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/part_a.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

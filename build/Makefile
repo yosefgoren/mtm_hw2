@@ -148,6 +148,19 @@ board/fast:
 	$(MAKE) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/build
 .PHONY : board/fast
 
+#=============================================================================
+# Target rules for targets named part_a
+
+# Build rule for target.
+part_a: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 part_a
+.PHONY : part_a
+
+# fast build rule for target.
+part_a/fast:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/build
+.PHONY : part_a/fast
+
 # target to build an object file
 part_a/main.obj:
 	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.obj
@@ -162,6 +175,21 @@ part_a/main.i:
 part_a/main.s:
 	$(MAKE) -f CMakeFiles\exam_system.dir\build.make CMakeFiles/exam_system.dir/part_a/main.s
 .PHONY : part_a/main.s
+
+# target to build an object file
+part_a/part_a_test.obj:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/part_a/part_a_test.obj
+.PHONY : part_a/part_a_test.obj
+
+# target to preprocess a source file
+part_a/part_a_test.i:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/part_a/part_a_test.i
+.PHONY : part_a/part_a_test.i
+
+# target to generate assembly for a file
+part_a/part_a_test.s:
+	$(MAKE) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/part_a/part_a_test.s
+.PHONY : part_a/part_a_test.s
 
 # target to build an object file
 part_b/Auxiliaries.obj:
@@ -311,10 +339,14 @@ help:
 	@echo ... game
 	@echo ... board
 	@echo ... edit_cache
+	@echo ... part_a
 	@echo ... rebuild_cache
 	@echo ... part_a/main.obj
 	@echo ... part_a/main.i
 	@echo ... part_a/main.s
+	@echo ... part_a/part_a_test.obj
+	@echo ... part_a/part_a_test.i
+	@echo ... part_a/part_a_test.s
 	@echo ... part_b/Auxiliaries.obj
 	@echo ... part_b/Auxiliaries.i
 	@echo ... part_b/Auxiliaries.s

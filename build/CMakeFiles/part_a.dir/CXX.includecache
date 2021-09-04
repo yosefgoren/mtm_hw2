@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.cpp
+examDetails.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.h
+cmath
+-
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.h
+string
+-
+exception
+-
+iostream
+-
+cmath
+-
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/part_a_test.cpp
+iostream
+-
+sortedList.h
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/sortedList.h
+examDetails.cpp
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.cpp
+
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/sortedList.h
+stdlib.h
+-
+stdio.h
+-
+iostream
+-
+assert.h
+-
+functional
+-
+

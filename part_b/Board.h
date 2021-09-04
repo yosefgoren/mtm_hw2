@@ -90,6 +90,10 @@ namespace mtm{
         }
 
         struct iterator{
+            explicit operator GridPoint() const{
+                return GridPoint(index%num_cols, index/num_cols);
+            }
+
             T& operator*(){
                 return board->items_array[index];
             }
@@ -113,6 +117,10 @@ namespace mtm{
         }
 
         struct const_iterator{
+            explicit operator GridPoint() const{
+                return GridPoint(index%num_cols, index/num_cols);
+            }
+
             const T& operator*(){
                 return board->items_array[index];
             }

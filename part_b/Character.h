@@ -24,8 +24,6 @@ namespace mtm{
         virtual bool inAttackRange(const GridPoint& src_point, 
                 const GridPoint& dst_point) const noexcept = 0;
         virtual bool canAttackTile(TileItem& other) const noexcept = 0;
-        virtual void attackTile(const GridPoint& src_point,
-                const GridPoint& dst_point, TileItem& target) = 0;
 
         const Team team;
         units_t health;

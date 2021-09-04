@@ -3,16 +3,16 @@
 using namespace std;
 using namespace mtm;
 
-class A : public Board<int>{
-    public:
-    A(int value):Board<int>(5,5,value){}
-    void foo(){
-        cout << *this << endl;
-    }
-};
+    class A{
+        public:
+        A* foo(){
+        A* a = this;
+        return a; 
+        }
+    };
 
 int main(){
     cout << "starting board test\n";
-    A(3).foo();
+    cout << A().foo() << endl;
     cout << "finished board test\n";
 }

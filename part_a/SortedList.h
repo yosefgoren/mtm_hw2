@@ -11,7 +11,6 @@
 template<class T>
 class SortedList;
 
-
     template<class T>
     class List{  //Internal Class
         private:
@@ -22,7 +21,7 @@ class SortedList;
         
         public:
         List();
-        ~List() = default ;//need to build custom destructor 
+        ~List() = default;//need to build custom destructor 
 
         /** Getters/Setters */
         T    getData() const;
@@ -34,9 +33,7 @@ class SortedList;
     };
 
     template<class T>
-    List<T>::List() : data(*(new T())), next(NULL), prev(NULL) {}
-
-
+    List<T>::List() : data(), next(NULL), prev(NULL) {}
 
     /**===Getters===*/
     template<class T>
@@ -67,19 +64,19 @@ class SortedList;
 
     template<class T>
     void cloneList(const List<T>* source_list ,List<T>* dest_list, int size){
-    for(int i = 0 ; i < size; i++){
-                //copy current data
-                dest_list->setData(source_list->getData()); 
-                //create and link next Node
-                if(i != size-1 ){
+        for(int i = 0 ; i < size; i++){
+            //copy current data
+            dest_list->setData(source_list->getData()); 
+            //create and link next Node
+            if(i != size-1 ){
                 List<T>* newNode = new List<T>();
                 newNode->setPrev(dest_list);
                 dest_list->setNext(newNode);
-                }
-                //iterate
-                source_list = source_list->getNext();
-                dest_list = dest_list->getNext();
             }
+            //iterate
+            source_list = source_list->getNext();
+            dest_list = dest_list->getNext();
+        }
     }
 
     template<class T>
@@ -103,6 +100,8 @@ class SortedList{
     unsigned int size;
     bool operator==(const SortedList& other) const; //Internal usage only (unrequired)
 
+    void deallocate();
+
     public:
         SortedList();
 
@@ -117,8 +116,8 @@ class SortedList{
 
         template<class Predicate>
         SortedList filter(Predicate c) const;
-        template<class R>
-        SortedList<R> apply(std::function<R(const T&)> Condition);
+        template<class R , class Mapper>
+        SortedList<R> apply(Mapper c);
         typename SortedList<T>::const_iterator begin() const;
         typename SortedList<T>::const_iterator end() const;
         class const_iterator;
@@ -134,13 +133,12 @@ SortedList<T>::SortedList() : list_head(new List<T>()), size(0) {}
 /**Destructor*/
 template<class T>
 SortedList<T>::~SortedList(){ 
-    delete this->list_head;
+    deallocate();
 } 
 /**Copy Constructor*/
 template<class T>
 SortedList<T>::SortedList(const SortedList<T>& source) : 
 list_head(new List<T>()), size(source.size){
-
         cloneList(source.list_head, list_head, size);
         
 }
@@ -151,9 +149,9 @@ SortedList<T>& SortedList<T>::operator=(const SortedList<T>& source){
     if(this == &source){
         return *this;
     }
-    delete list_head; //unsure of this line
+    deallocate();
     size = source.size;
-    // List<T>* list_head = new List<T>(); //unsure of this line
+    List<T>* list_head = new List<T>(); 
     cloneList((source.list_head), this->list_head , source.size);
     return *this;
 }
@@ -173,7 +171,7 @@ void SortedList<T>::insert(const T& new_item){
         size++;
         return;
     }
-    List<T>* new_node = new List<T>(); 
+    List<T>* new_node = new List<T>();
     new_node->setData(new_item);
 
     List<T>* node_before = getNodeBefore( list_head, new_item);
@@ -198,43 +196,53 @@ void SortedList<T>::insert(const T& new_item){
 }
 
 
+template <class T>
+void SortedList<T>::deallocate(){
+    List<T>* current_node = list_head;
+    while(current_node != nullptr){
+        List<T>* tmp_node = current_node;
+        current_node = current_node->next;
+        delete tmp_node;
+    }
+}
 
 
 template<class T>
 SortedList<T>& SortedList<T>::remove( typename SortedList<T>::const_iterator it){
-List<T>* node_before = getNodeBefore<T>(list_head , *it);
-List<T>* node_after = (node_before->getNext())->getNext();
-//possible memory leak
-if(node_before != NULL){
-    node_before->setNext(node_after);
-}
-if(node_after != NULL){
-    node_after->setPrev(node_before);
-}
-return *this;
+    List<T>* node_before = getNodeBefore<T>(list_head , *it);
+    List<T>* node_after = node_before->getNext()->getNext();
+    delete node_before->getNext();
+    
+    if(node_before != NULL){
+        node_before->setNext(node_after);
+    }
+    if(node_after != NULL){
+        node_after->setPrev(node_before);
+    }
+    return *this;
 }
 
 template<class T>
 template<class Predicate>
 SortedList<T> SortedList<T>::filter(Predicate c) const{
-    SortedList<T>* result = new SortedList<T>;
+    SortedList<T> result();
     for(typename SortedList<T>::const_iterator it = begin(); !(it == end()); ++it){
         if (c(*it)) { 
-           result->insert(*it); 
+           result.insert(*it); 
         }      
     }
-    return *result;
+    return result;
 }
 
 template<class T>
-template<class R>
-SortedList<R> SortedList<T>::apply(std::function<R(const T&)> Condition){
-    SortedList<R>* result = new SortedList<R>;
+template<class R , class Mapper>
+SortedList<R> SortedList<T>::apply(Mapper mapper){
+    SortedList<R> result = SortedList<R>;
     for(typename SortedList<T>::const_iterator it = begin(); !(it == end()); ++it){
-        R applied = Condition(*it);
-        result->insert(applied);
+        R applied = mapper(*it);
+        result.insert(applied);
     }
-    return *result;
+    return result;
 }
 
 template<class T>
@@ -267,13 +275,12 @@ bool SortedList<T>::operator==(const SortedList& other) const{
 
 template<class T>
 void SortedList<T>::printList() {
-        List<T>* ptr = list_head;
-        while(ptr != NULL){
-            std::cout << ptr->data << " , " ;
-            ptr = ptr->next;
-            
-        }
+    List<T>* ptr = list_head;
+    while(ptr != NULL){
+        std::cout << ptr->data << " , ";
+        ptr = ptr->next;
     }
+}
 
 
 template<class T>

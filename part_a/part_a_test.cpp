@@ -76,7 +76,7 @@ int main()
     printList(lst3);
 
     TEST("1.8")
-    lst3 = lst3.apply<string>(getLen);//added <string>
+    lst3 = lst3.apply(getLen);
     printList(lst3);
 
 

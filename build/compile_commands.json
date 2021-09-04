@@ -53,5 +53,10 @@
   "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
   "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\board.dir\\part_b\\Auxiliaries.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Auxiliaries.cpp",
   "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp"
+},
+{
+  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
+  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\part_a.dir\\part_a\\part_a_test.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_a\\part_a_test.cpp",
+  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/part_a_test.cpp"
 }
 ]
