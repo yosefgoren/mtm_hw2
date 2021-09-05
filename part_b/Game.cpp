@@ -51,28 +51,26 @@ namespace mtm{
         new_tile.setCharacter(character);
     }
 
-    // void Game::attack(const GridPoint& src_coordinates , const GridPoint& dst_coordinates){
-    //     if(!positionWithinBoard(src_coordinates) || !positionWithinBoard(dst_coordinates)){
-    //         throw IllegalCell();
-    //     }
-    //     TileItem& attacking_tile = (*this)(src_coordinates);
-    //     if(attacking_tile.tileEmpty()){
-    //         throw CellEmpty();
-    //     }
-    //     shared_ptr<Character> attacker = attacking_tile.getCharacter();
-    //     if(!attacker->inAttackRange(src_coordinates, dst_coordinates)){
-    //         throw OutOfRange();
-    //     }
-    //     if(!attacker.hasAmmoToAttack()){
-    //         throw OutOfAmmo();
-    //     }
-    //     vector<const GridPoint&> affected_coordiantes = attacker.coordinatesAffectedByAttack(dst_coordinates);
-    //     vector<TileItem&> affected_tiles;
-    //     for(const GridPoint& coordinate : affected_coordiantes){
-    //         affected_tiles.push_back((*this)(coordinate));
-    //     }
-    //     attacker.
-    // }
+    void Game::attack(const GridPoint& src_coordinates , const GridPoint& dst_coordinates){
+        if(!positionWithinBoard(src_coordinates) || !positionWithinBoard(dst_coordinates)){
+            throw IllegalCell();
+        }
+        TileItem& attacking_tile = (*this)(src_coordinates);
+        if(attacking_tile.tileEmpty()){
+            throw CellEmpty();
+        }
+        Character& attacker = *attacking_tile.getCharacter();
+        TileItem& target_tile = (*this)(dst_coordinates);
+        vector<GridPoint> affected_coordiantes = 
+                attacker.coordinatesAffectedByAttack(src_coordinates, target_tile);
+        vector<TileItem*> affected_tiles;
+        for(const GridPoint& coordinate : affected_coordiantes){
+            if(positionWithinBoard(coordinate)){
+                affected_tiles.push_back(&(*this)(coordinate));
+            }
+        }
+        //attacker.executeAttack(affected_tiles);
+    }
 
     // void Game::reload(const GridPoint& coordinates);
     // std::ostream& Game::operator<<(std::ostream& os) const;

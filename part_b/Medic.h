@@ -10,9 +10,8 @@ namespace mtm{
         virtual char getSymbol() const noexcept override;
         virtual Character* clone() const override;
         virtual int maxMoveDistance() const noexcept override;
-        virtual bool inAttackRange(const GridPoint& src_point, const GridPoint& dst_point)
-                const noexcept override;
-        virtual bool canAttackTile(TileItem& other) const noexcept override;
+        virtual std::vector<GridPoint> coordinatesAffectedByAttack(const GridPoint& src_point,
+                TileItem& target) const override;
     };
 }
 

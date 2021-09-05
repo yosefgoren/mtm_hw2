@@ -1,4 +1,5 @@
 #include "TileItem.h"
+#include "Character.h"
 
 using namespace mtm;
 

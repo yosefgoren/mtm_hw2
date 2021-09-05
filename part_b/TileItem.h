@@ -3,10 +3,10 @@
 
 #include <memory>
 #include <iostream>
-#include "Character.h"
 #include "Auxiliaries.h"
 
-namespace mtm{    
+namespace mtm{
+    class Character;
     class TileItem{
     public:
         TileItem(): character(nullptr), current_location(0,0){}

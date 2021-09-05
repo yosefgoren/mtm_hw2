@@ -1,0 +1,8 @@
+in SortedList - apply & filter:
+    do the methods expect to get a parameter as a Functor class, 
+    or do they expect to get a parameter as a function of std::function?
+
+in part b - medic - attack:
+    if ammo is 0 and the target is an empty tile,
+    should we throw OutOfAmmo or IllegalTarget?
+        

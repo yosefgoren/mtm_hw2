@@ -2,9 +2,11 @@
 #define CHARACTER_H
 #include "iostream"
 #include "Auxiliaries.h"
+#include "TileItem.h"
+#include "Exceptions.h"
+#include <vector>
 
 namespace mtm{
-    class TileItem;
     class Character{
     public:
         Character(Team team, units_t health, units_t ammo, units_t range, units_t power);
@@ -17,13 +19,29 @@ namespace mtm{
          */
         bool canMoveThere(const GridPoint& src_point, const GridPoint& dst_point) const;
         virtual int maxMoveDistance() const noexcept = 0;
-        /**
-         * checks if the character can attack the dst_point from the src_point,
-         * regardless of whether or not it is in src_point or what is in the tile of dst_point. 
+    
+        /*
+         * @return the set of coordinates that might be 
+         * involved if the character will attack the 'target' tile from src_point.
+         * some of the coordinates returned might be out of the board and should be ignored.
+         * @throw the following exceptions might be thrown in this order:
+         *      OutOfRange -  cannot attack due to it's position.
+         *      OutOfAmmo - cannot attack due to a lack of ammo.
+         *      IllegalTarget - cannot attack due to the content of 'target'.
          */
-        virtual bool inAttackRange(const GridPoint& src_point, 
-                const GridPoint& dst_point) const noexcept = 0;
-        virtual bool canAttackTile(TileItem& other) const noexcept = 0;
+        virtual std::vector<GridPoint> coordinatesAffectedByAttack(const GridPoint& src_point,
+                TileItem& target) const = 0;
+
+        /**
+         * @param targeted_tiles - expected to be the tiles of the coordinates 
+         * given by 'coordiantesAffectedByAttack'.
+         * @param target_point - the point targeted by the attack.
+         * the method will affect the targeted tiles as needed and the character itself 
+         * for example: possibly reduce the health of the characters within the tiles
+         * and reduce the ammo of the attacker (this).
+         */
+        // virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
+        //         const GridPoint& target_point) noexcept = 0;
 
         const Team team;
         units_t health;

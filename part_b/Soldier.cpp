@@ -1,5 +1,7 @@
 #include "Soldier.h"
 
+using namespace std;
+
 namespace mtm{
     Soldier::Soldier(Team team, units_t health, units_t ammo, units_t range, units_t power):
             Character(team, health, ammo, range, power){}
@@ -12,15 +14,33 @@ namespace mtm{
     int Soldier::maxMoveDistance() const noexcept{
         return 3;
     }
-    bool Soldier::inAttackRange(const GridPoint& src_point, 
-            const GridPoint& dst_point) const noexcept{
-        //"can only attak in a straight line and no further than range"
-        if(src_point.col == dst_point.col || src_point.row == dst_point.row){
-            return GridPoint::distance(src_point, dst_point) <= range;
+
+    static unsigned int roundUp(unsigned int numerator, unsigned int denominator){
+        if(numerator%denominator == 0){
+            return numerator/denominator;
         }
-        return false;
+        return numerator/denominator + 1;
     }
-    bool Soldier::canAttackTile(TileItem& other) const noexcept{
-        return true;
+
+    vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point, TileItem& target) const{
+        const GridPoint& target_point = target.getLocation();
+        if(!(src_point.row == target_point.row || src_point.col == target_point.col)
+                ||  GridPoint::distance(src_point, target_point) <= range){
+            throw OutOfRange();
+        }
+        if(ammo == 0){
+            throw OutOfAmmo();
+        }
+        vector<GridPoint> result = vector<GridPoint>();
+        int splash_distance = roundUp(range, 3);
+        for(int dy = -splash_distance; dy <= splash_distance; ++dy){
+            for(int dx = -splash_distance; dx <= splash_distance; ++dx){
+                GridPoint point(target_point.row + dy, target_point.col + dx);
+                if(GridPoint::distance(point, target_point) <= splash_distance){
+                    result.push_back(point);
+                }
+            }
+        }
+        return result;
     }
 }
