@@ -69,7 +69,7 @@ namespace mtm{
                 affected_tiles.push_back(&(*this)(coordinate));
             }
         }
-        //attacker.executeAttack(affected_tiles);
+        attacker.executeAttack(affected_tiles, dst_coordinates);
     }
 
     // void Game::reload(const GridPoint& coordinates);

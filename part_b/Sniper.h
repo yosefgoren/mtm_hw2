@@ -12,6 +12,10 @@ namespace mtm{
         virtual int maxMoveDistance() const noexcept override;
         virtual std::vector<GridPoint> coordinatesAffectedByAttack(const GridPoint& src_point,
                 TileItem& target) const override;
+        virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
+                const GridPoint& target_point) noexcept override;
+    private:
+        int num_successfull_attacks;
     };
 }
 

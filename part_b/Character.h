@@ -40,8 +40,8 @@ namespace mtm{
          * for example: possibly reduce the health of the characters within the tiles
          * and reduce the ammo of the attacker (this).
          */
-        // virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
-        //         const GridPoint& target_point) noexcept = 0;
+        virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
+                const GridPoint& target_point) noexcept = 0;
 
         const Team team;
         units_t health;

@@ -1,5 +1,6 @@
 #include "Medic.h"
 #include "TileItem.h"
+#include "assert.h"
 
 using namespace std;
 
@@ -21,8 +22,7 @@ namespace mtm{
         if(GridPoint::distance(src_point, target.getLocation()) > range){
             throw OutOfRange();
         }
-        //if medic has no ammo and the target is an empty tile, should we throw OutOfAmmo or IllegalTarget?
-        if(target.tileEmpty()){
+        if(target.tileEmpty() || src_point == target.getLocation()){
             throw IllegalTarget();
         }
         if(target.getCharacter()->team != team && ammo == 0){
@@ -31,5 +31,17 @@ namespace mtm{
         vector<GridPoint> result;
         result.push_back(target.getLocation());
         return result;
+    }
+    void Medic::executeAttack(std::vector<TileItem*> targeted_tiles, const GridPoint& target_point) noexcept{
+        assert(targeted_tiles.size() == 1);
+        TileItem& targeted_tile = *(targeted_tiles.back());
+        assert(!targeted_tile.tileEmpty());
+        assert(targeted_tile.getLocation() == target_point);
+        if(targeted_tile.getCharacter()->team == team){
+            targeted_tile.getCharacter()->health += power;
+        } else {
+            targeted_tile.getCharacter()->health -= power;
+            ammo--;
+        }
     }
 }

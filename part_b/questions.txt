@@ -5,4 +5,5 @@ in SortedList - apply & filter:
 in part b - medic - attack:
     if ammo is 0 and the target is an empty tile,
     should we throw OutOfAmmo or IllegalTarget?
-        
+
+in examDetails - the latest instructions file seems to have one of the exception names missing.    

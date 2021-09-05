@@ -1,4 +1,6 @@
 #include "Soldier.h"
+#include <assert.h>
+#include <math.h>
 
 using namespace std;
 
@@ -16,10 +18,7 @@ namespace mtm{
     }
 
     static unsigned int roundUp(unsigned int numerator, unsigned int denominator){
-        if(numerator%denominator == 0){
-            return numerator/denominator;
-        }
-        return numerator/denominator + 1;
+        return ceil((double)numerator / (double)denominator);
     }
 
     vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point, TileItem& target) const{
@@ -42,5 +41,18 @@ namespace mtm{
             }
         }
         return result;
+    }
+    void Soldier::executeAttack(std::vector<TileItem*> targeted_tiles,
+            const GridPoint& target_point) noexcept{
+        unsigned int partial_damage = roundUp(power, 2);
+        for(TileItem* tile : targeted_tiles){
+            assert(!tile);
+            assert(!tile->tileEmpty());
+            Character& targeted_character = *(tile->getCharacter());
+            if(targeted_character.team != team){
+                targeted_character.health -= (tile->getLocation() == target_point ? power : partial_damage);
+            }             
+        }
+        ammo--;
     }
 }
