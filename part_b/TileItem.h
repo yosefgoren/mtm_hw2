@@ -13,11 +13,16 @@ namespace mtm{
         friend std::ostream& operator<<(std::ostream& os, const TileItem& item);
         TileItem& setCharacter(std::shared_ptr<Character> new_character);
         std::shared_ptr<Character> getCharacter() noexcept;
+        /**
+         * @throw CellEmpty if the cell is empty.
+         */
+        Team getTeam() const;
         const GridPoint& getLocation() const noexcept;
         TileItem& setLocation(const GridPoint& new_location) noexcept;
         //std::shared_ptr<Character const> getCharacter() const noexcept;
         TileItem& operator=(const TileItem& other);
         bool tileEmpty() const noexcept;
+        void cleanIfDead();
         
     private:
         std::shared_ptr<Character> character;

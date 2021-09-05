@@ -51,8 +51,12 @@ namespace mtm{
             Character& targeted_character = *(tile->getCharacter());
             if(targeted_character.team != team){
                 targeted_character.health -= (tile->getLocation() == target_point ? power : partial_damage);
+                tile->cleanIfDead();
             }             
         }
         ammo--;
+    }
+    void Soldier::reload() noexcept{
+        ammo += 3;
     }
 }

@@ -29,4 +29,15 @@ namespace mtm{
         current_location = new_location;
         return *this;
     }
+    void TileItem::cleanIfDead(){
+        if(!tileEmpty() && character->shouldBeDead()){
+            character = nullptr;
+        }
+    }
+    Team TileItem::getTeam() const{
+        if(character == nullptr){
+            throw CellEmpty();
+        }
+        return character->team;
+    }
 }

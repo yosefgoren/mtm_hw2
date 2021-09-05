@@ -72,8 +72,33 @@ namespace mtm{
         attacker.executeAttack(affected_tiles, dst_coordinates);
     }
 
-    // void Game::reload(const GridPoint& coordinates);
-    // std::ostream& Game::operator<<(std::ostream& os) const;
-    // bool Game::isOver(Team* winningTeam = NULL) const;
+    void Game::reload(const GridPoint& coordinates){
+        if(!positionWithinBoard(coordinates)){
+            throw IllegalCell();
+        }
+        TileItem& tile = (*this)(coordinates);
+        if(tile.tileEmpty()){
+            throw CellEmpty();
+        }
+        tile.getCharacter()->reload();
+    }
 
+    bool Game::isOver(Team* winningTeam) const{
+        int powerlifter_count = 0, crossfitter_count = 0;
+        for(const TileItem& item : *this){
+            if(!item.tileEmpty()){
+                (item.getTeam() == CROSSFITTERS ? crossfitter_count : powerlifter_count)++;
+            }
+        }
+        if(powerlifter_count == 0 && crossfitter_count == 0){
+            return false;
+        }
+        if(powerlifter_count == 0 || crossfitter_count == 0){
+            if(winningTeam != nullptr){
+                *winningTeam = (powerlifter_count > crossfitter_count ? POWERLIFTERS : CROSSFITTERS);
+            }
+            return true;
+        }
+        return false;
+    }
 }

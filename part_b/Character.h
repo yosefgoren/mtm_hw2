@@ -43,6 +43,10 @@ namespace mtm{
         virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
                 const GridPoint& target_point) noexcept = 0;
 
+        virtual void reload() noexcept = 0;
+
+        bool shouldBeDead() const noexcept;
+
         const Team team;
         units_t health;
         units_t ammo;

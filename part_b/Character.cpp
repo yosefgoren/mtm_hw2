@@ -11,4 +11,7 @@ namespace mtm
     bool Character::canMoveThere(const GridPoint& src_point, const GridPoint& dst_point) const{
         return GridPoint::distance(src_point, dst_point) <= maxMoveDistance();
     }
+    bool Character::shouldBeDead() const noexcept{
+        return health <= 0;
+    }
 }

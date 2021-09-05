@@ -14,6 +14,7 @@ namespace mtm{
                 TileItem& target) const override;
         virtual void executeAttack(std::vector<TileItem*> targeted_tiles,
                 const GridPoint& target_point) noexcept override;
+        virtual void reload() noexcept override;
     private:
         int num_successfull_attacks;
     };

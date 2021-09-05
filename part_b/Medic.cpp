@@ -41,7 +41,11 @@ namespace mtm{
             targeted_tile.getCharacter()->health += power;
         } else {
             targeted_tile.getCharacter()->health -= power;
+            targeted_tile.cleanIfDead();
             ammo--;
         }
+    }
+    void Medic::reload() noexcept{
+        ammo += 5;
     }
 }

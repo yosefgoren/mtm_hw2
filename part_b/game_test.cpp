@@ -18,12 +18,17 @@ void testAttack(){
     auto medic = Game::makeCharacter(MEDIC, POWERLIFTERS, 1, 1, 2, 1);
     auto sniper = Game::makeCharacter(SNIPER, POWERLIFTERS, 1, 1, 2, 1);
     auto soldier = Game::makeCharacter(SOLDIER, CROSSFITTERS, 1, 1, 2, 1);
+    cout << g.isOver() << endl;
     g.addCharacter(GridPoint(0,2), medic);
     g.addCharacter(GridPoint(0,1), sniper);
     g.addCharacter(GridPoint(1,1), soldier);
     cout << g << endl;
     g.attack(GridPoint(0,2), GridPoint(0,1));
+    cout << g.isOver() << endl;
     g.attack(GridPoint(0,1), GridPoint(1,1));
+    g.reload(GridPoint(0,1));
+    cout << g << endl;
+    cout << g.isOver() << endl;
 }
 
 int main(){

@@ -22,38 +22,10 @@ C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Exceptions.h
 sstream
 -
 
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
-iostream
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/iostream
-Auxiliaries.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.h
-TileItem.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
-Exceptions.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Exceptions.h
-vector
--
-
 C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Exceptions.h
 exception
 -
 string
--
-
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.cpp
-Game.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.h
-Exceptions.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Exceptions.h
-Character.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
-Soldier.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.h
-Medic.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.h
-Sniper.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.h
-vector
 -
 
 C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.h
@@ -61,18 +33,6 @@ Board.h
 C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Board.h
 TileItem.h
 C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
-
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.h
-Character.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
-
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.h
-Character.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
-
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.h
-Character.h
-C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.h
 
 C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.h
 memory

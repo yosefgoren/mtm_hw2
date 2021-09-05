@@ -43,5 +43,9 @@ namespace mtm{
         ammo--;
         int damage_dealt = power*(1 + (num_successfull_attacks%3 == 0));
         targeted_tile.getCharacter()->health -= damage_dealt;
+        targeted_tile.cleanIfDead();
+    }
+    void Sniper::reload() noexcept{
+        ammo += 2;
     }
 }
