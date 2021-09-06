@@ -44,8 +44,10 @@ namespace mtm{
                 const GridPoint& target_point) noexcept = 0;
 
         virtual void reload() noexcept = 0;
-
         bool shouldBeDead() const noexcept;
+
+        static std::shared_ptr<Character> createCharacter(CharacterType type, Team team, 
+            units_t health, units_t ammo, units_t   range, units_t power);
 
         const Team team;
         units_t health;

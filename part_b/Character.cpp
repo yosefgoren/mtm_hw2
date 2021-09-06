@@ -1,4 +1,7 @@
 #include "Character.h"
+#include "Soldier.h"
+#include "Sniper.h"
+#include "Medic.h"
 
 namespace mtm
 {
@@ -13,5 +16,17 @@ namespace mtm
     }
     bool Character::shouldBeDead() const noexcept{
         return health <= 0;
+    }
+    std::shared_ptr<Character> Character::createCharacter(CharacterType type, Team team, 
+            units_t health, units_t ammo, units_t   range, units_t power){
+        switch(type){
+            case SOLDIER:
+            return std::make_shared<Soldier>(Soldier(team, health, ammo, range, power));
+            case MEDIC:
+            return std::make_shared<Medic>(Medic(team, health, ammo, range, power));
+            case SNIPER:
+            return std::make_shared<Sniper>(Sniper(team, health, ammo, range, power));
+        }
+        return nullptr;
     }
 }

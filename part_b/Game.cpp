@@ -1,9 +1,6 @@
 #include "Game.h"
 #include "Exceptions.h"
 #include "Character.h"
-#include "Soldier.h"
-#include "Medic.h"
-#include "Sniper.h"
 #include <vector>
 
 using namespace std;
@@ -20,15 +17,7 @@ namespace mtm{
 
     std::shared_ptr<Character> Game::makeCharacter(CharacterType type, Team team, 
             units_t health, units_t ammo, units_t   range, units_t power){
-        switch(type){
-            case SOLDIER:
-            return make_shared<Soldier>(Soldier(team, health, ammo, range, power));
-            case MEDIC:
-            return make_shared<Medic>(Medic(team, health, ammo, range, power));
-            case SNIPER:
-            return make_shared<Sniper>(Sniper(team, health, ammo, range, power));
-        }
-        return nullptr;
+        return Character::createCharacter(type, team, health, ammo, range, power);
     }
 
     void Game::move(const GridPoint& src_coordinates, const GridPoint& dst_coordinates){
