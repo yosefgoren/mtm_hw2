@@ -50,6 +50,7 @@ CMakeFiles/game.dir/part_b/TileItem.obj: ../part_b/TileItem.h
 
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Auxiliaries.h
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Board.h
+CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Character.h
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Exceptions.h
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/Game.h
 CMakeFiles/game.dir/part_b/game_test.obj: ../part_b/TileItem.h

@@ -1,7 +1,15 @@
 #include "Game.h"
+#include "Character.h"
+#include "Auxiliaries.h"
 
 using namespace std;
 using namespace mtm;
+
+void printStats(Character* c){
+    cout << *c << " | "; 
+    cout << "health=" << c->health << " | ";
+    cout << "ammo=" << c->ammo << endl;
+}
 
 void testCopy(){
     Game g1(2, 2);
@@ -16,6 +24,7 @@ void testCopy(){
 void testAttack(){
     Game g(2,3);
     auto medic = Game::makeCharacter(MEDIC, POWERLIFTERS, 1, 1, 2, 1);
+    printStats(medic.get());
     auto sniper = Game::makeCharacter(SNIPER, POWERLIFTERS, 1, 1, 2, 1);
     auto soldier = Game::makeCharacter(SOLDIER, CROSSFITTERS, 1, 1, 2, 1);
     cout << g.isOver() << endl;

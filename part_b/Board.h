@@ -16,136 +16,80 @@ namespace mtm{
      *  std::ostream& operator<<(std::ostream& os) const -- expects output to be a single char.
      */
     class Board{
-    protected:
-        Board(int num_rows, int num_cols, const T& default_value):
-                num_rows(num_rows), num_cols(num_cols), items_array(nullptr){
-            if(num_rows <= 0 || num_cols <= 0){
-                throw IllegalArgument();
-            }
-            items_array = new T[num_rows*num_cols];
-            for(T& item : *this){
-                item = T(default_value);
-            }
-        }
     public:
-        ~Board(){
-            dealloate();
-        }
-        Board(const Board& other):
-                num_rows(other.num_rows), num_cols(other.num_cols), items_array(nullptr){
-            items_array = new T[num_rows*num_cols];
-            for(Board::iterator it = this->begin(); it != this->end(); ++it){
-                *it = T(other(it.index));
-            }
-        }
+        ~Board();
+        Board(const Board& other);
         /**
          * 'other' and 'this' will not effect one another after assignment.
          * (assignment 'by copy' not 'by reference').
          */
-        Board& operator=(const Board& other){
-            Board new_self(other);
-            dealloate();
-            swap(*this, new_self);
-            return *this;
-        }
+        Board& operator=(const Board& other);
 
     protected:
-        bool positionWithinBoard(const GridPoint& coordiantes){
-            int col = coordiantes.col, row = coordiantes.row;
-            if(col < 0 || row < 0){
-                return false;
-            }
-            return col < num_cols && row < num_rows;
-        }
+        Board(int num_rows, int num_cols, const T& default_value);
+        int getWidth() const;
+        bool positionWithinBoard(const GridPoint& coordiantes);
 
-        T& operator()(int row, int col){
-            return (*this)(GridPoint(row, col));
+        #define CREATE_OPBR_ROWCOL(maybe_const)\
+        maybe_const T& operator()(int row, int col) maybe_const{\
+            return (*this)(GridPoint(row, col));\
         }
-        const T& operator()(int row, int col) const{
-            return (*this)(GridPoint(row, col));
-        }
-        T& operator()(const GridPoint& point){
-            if(!positionWithinBoard(point)){
-                throw IllegalCell();
-            }
-            return items_array[toLinearPosition(point)];
-        }
-        const T& operator()(const GridPoint& point) const{
-            if(!positionWithinBoard(point)){
-                throw IllegalCell();
-            }
-            return items_array[toLinearPosition(point)];
-        }
-        T& operator()(int index){
-            if(index < 0 || index >= num_cols*num_rows){
-                throw IllegalCell();
-            }
-            return items_array[index];
-        }
-        const T& operator()(int index) const{
-            if(index < 0 || index >= num_cols*num_rows){
-                throw IllegalCell();
-            }
-            return items_array[index];
-        }
+        CREATE_OPBR_ROWCOL()
+        CREATE_OPBR_ROWCOL(const)
+        #undef CREATE_OPBR_ROWCOL
 
-        struct iterator{
-            explicit operator GridPoint() const{
-                return GridPoint(index/(board->num_cols), index%(board->num_cols));
-            }
+        #define CREATE_OPBR_GRIDPOINT(maybe_const)\
+        maybe_const T& operator()(const GridPoint& point) maybe_const{\
+            if(!positionWithinBoard(point)){\
+                throw IllegalCell();\
+            }\
+            return items_array[toLinearPosition(point)];\
+        }
+        CREATE_OPBR_GRIDPOINT()
+        CREATE_OPBR_GRIDPOINT(const)
+        #undef CREATE_OPBR_GRIDPOINT
 
-            T& operator*(){
-                return board->items_array[index];
-            }
-            bool operator!=(const iterator& other) const{
-                return index != other.index || board != other.board;
-            }
-            iterator& operator++(){
-                index++;
-                return *this;
-            }
-            int index;
-            Board* board;
-        };  
-        iterator begin(){
-            iterator it = {0, this};
-            return it;
+        #define CREATE_OPBR_INDEX(maybe_const)\
+        maybe_const T& operator()(int index) maybe_const{\
+            if(index < 0 || index >= num_cols*num_rows){\
+                throw IllegalCell();\
+            }\
+            return items_array[index];\
         }
-        iterator end(){
-            iterator it = {num_cols*num_rows, this};
-            return it;
-        }
+        CREATE_OPBR_INDEX()
+        CREATE_OPBR_INDEX(const)
+        #undef CREATE_OPBR_INDEX
 
-        struct const_iterator{
-            explicit operator GridPoint() const{
-                return GridPoint(index/(board->num_cols), index%(board->num_cols));
-            }
-
-            const T& operator*(){
-                return board->items_array[index];
-            }
-            bool operator!=(const const_iterator& other) const{
-                return index != other.index || board != other.board;
-            }
-            const_iterator& operator++(){
-                index++;
-                return *this;
-            }
-            int index;
-            const Board* board;
-        };  
-        const_iterator begin() const{
-            const_iterator it = {0, this};
-            return it;
+        #define CREATE_ITERATOR(iterator_name, maybe_const)\
+        class iterator_name{\
+        public:\
+            explicit operator GridPoint() const{\
+                return GridPoint(index/(board->num_cols), index%(board->num_cols));\
+            }\
+            maybe_const T& operator*(){\
+                return board->items_array[index];\
+            }\
+            bool operator!=(const iterator_name& other) const{\
+                return index != other.index || board != other.board;\
+            }\
+            iterator_name& operator++(){\
+                index++;\
+                return *this;\
+            }\
+            int index;\
+            maybe_const Board* board;\
+        };\
+        iterator_name begin() maybe_const{\
+            iterator_name it = {0, this};\
+            return it;\
+        }\
+        iterator_name end() maybe_const{\
+            iterator_name it = {num_cols*num_rows, this};\
+            return it;\
         }
-        const_iterator end() const{
-            const_iterator it = {num_cols*num_rows, this};
-            return it;
-        }
-
-        int getWidth() const{
-            return num_cols;
-        }
+        CREATE_ITERATOR(iterator,)
+        CREATE_ITERATOR(const_iterator, const)
+        #undef CREATE_ITERATOR
 
     private:
         int num_rows, num_cols;
@@ -187,6 +131,49 @@ namespace mtm{
         std::string str = stream.str();
         printGameBoard(os, str.c_str(), str.c_str() + str.size(), board.getWidth());
         return os;
+    }
+
+    template <class T>
+    Board<T>::Board(int num_rows, int num_cols, const T& default_value):
+            num_rows(num_rows), num_cols(num_cols), items_array(nullptr){
+        if(num_rows <= 0 || num_cols <= 0){
+            throw IllegalArgument();
+        }
+        items_array = new T[num_rows*num_cols];
+        for(T& item : *this){
+            item = T(default_value);
+        }
+    }
+    template <class T>
+    Board<T>::~Board(){
+        dealloate();
+    }
+    template <class T>
+    Board<T>::Board(const Board& other): num_rows(other.num_rows), num_cols(other.num_cols), items_array(nullptr){
+        items_array = new T[num_rows*num_cols];
+        for(Board::iterator it = this->begin(); it != this->end(); ++it){
+            *it = T(other(it.index));
+        }
+    }
+    template <class T>
+    Board<T>& Board<T>::operator=(const Board& other){
+        Board new_self(other);
+        dealloate();
+        swap(*this, new_self);
+        return *this;
+    }
+    template <class T>
+    int Board<T>::getWidth() const{
+        return num_cols;
+    }
+    
+    template <class T>
+    bool Board<T>::positionWithinBoard(const GridPoint& coordiantes){
+        int col = coordiantes.col, row = coordiantes.row;
+        if(col < 0 || row < 0){
+            return false;
+        }
+        return col < num_cols && row < num_rows;
     }
 }
 #endif
