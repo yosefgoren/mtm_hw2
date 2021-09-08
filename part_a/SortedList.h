@@ -13,13 +13,13 @@ namespace mtm{
         private:
         class Node{  
             private:
-            T data;
+            T* data;
             Node* next;
             Node* prev;
             friend class SortedList;
 
             public:
-            Node() : data(), next(NULL), prev(NULL) {}
+            Node() : data(NULL), next(NULL), prev(NULL) {}
             ~Node() = default;
             void cloneList(Node* source_list, int size);
             Node* getNodeBefore(T new_item);
@@ -55,7 +55,7 @@ namespace mtm{
         SortedList<T>::Node* dest_list = this;
         for(int i = 0 ; i < size; i++){
             // Copy current Data 
-             dest_list->data = source_list->data ;
+             *(dest_list->data) = *(source_list->data) ;
             // Create and link next Node
             if(i != size - 1 ){ // Do not create next node if we are at the last node.
                 SortedList<T>::Node* new_node = new Node();
@@ -72,7 +72,7 @@ namespace mtm{
     typename SortedList<T>::Node* SortedList<T>::Node::getNodeBefore(T new_item){
         SortedList<T>::Node* current = this;
         SortedList<T>::Node* previous = NULL; 
-        while(current != NULL && current->data < new_item){
+        while(current != NULL && *(current->data) < new_item){
             previous = current;
             current = current->next;
         }
@@ -99,7 +99,7 @@ namespace mtm{
         SortedList<T>::Node* list1_ptr = list_head;
         SortedList<T>::Node* list2_ptr = other->list_head;
         while(list1_ptr != NULL){
-            if(list1_ptr->data != list2_ptr->data){
+            if(*(list1_ptr->data) != *(list2_ptr->data)){
                 return false;
             }
             list1_ptr = list1_ptr->next;
@@ -146,12 +146,12 @@ namespace mtm{
     template<class T>
     void SortedList<T>::insert(const T& new_item){
         if(size == 0){ //empty list case
-            this->list_head->data = new_item;
+            *(this->list_head->data) = new_item;
             size++;
             return;
         }
         SortedList<T>::Node* new_node = new Node();
-        new_node->data = new_item;
+        *(new_node->data) = new_item;
 
         SortedList<T>::Node* node_before = this->list_head->getNodeBefore(new_item); // unknown error
 
@@ -283,7 +283,7 @@ namespace mtm{
     for(unsigned int i = 0; i < index; i++){
         list_ptr = list_ptr->next;
     }
-    return list_ptr->data;
+    return *(list_ptr->data);
     }
 
 
