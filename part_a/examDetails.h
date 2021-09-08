@@ -48,8 +48,6 @@ namespace mtm{
 
     };
 
-    // bool operator<(const ExamDetails& first, const ExamDetails& second);
-
     ostream& operator<<(ostream& os, const ExamDetails& details)
     { 
         os << "Course Number: " <<  details.course_number << endl;
