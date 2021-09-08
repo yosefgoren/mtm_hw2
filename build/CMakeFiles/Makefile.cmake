@@ -48,5 +48,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/game.dir/DependInfo.cmake"
+  "CMakeFiles/board.dir/DependInfo.cmake"
+  "CMakeFiles/partA_group_test.dir/DependInfo.cmake"
   "CMakeFiles/part_a.dir/DependInfo.cmake"
   )

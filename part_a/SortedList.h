@@ -43,9 +43,9 @@ namespace mtm{
             SortedList filter(Predicate c) const; 
             template<class R , class Mapper>
             SortedList<R> apply(Mapper c); 
+            class const_iterator;
             typename SortedList<T>::const_iterator begin() const; 
             typename SortedList<T>::const_iterator end() const; 
-            class const_iterator;
     };
 
     // Node functions:
@@ -133,7 +133,7 @@ namespace mtm{
         }
         deallocate();
         size = source.size;
-        SortedList<T>::Node* list_head = new Node(); 
+        list_head = new Node(); 
         this->list_head->cloneList(source.list_head, source.size); //unknown error
         return *this;
     }
@@ -258,6 +258,7 @@ namespace mtm{
     SortedList<T>::const_iterator::operator=(const const_iterator& source){
         index = source.index;
         sorted_list = source.sorted_list;
+        return *this;
     }
 
     template<class T>

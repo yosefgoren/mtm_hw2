@@ -9,7 +9,7 @@ namespace mtm
     class TestClass
     {
     private:
-        //int x;
+        // int x;
         double y;
 
         TestClass(int x, double y);

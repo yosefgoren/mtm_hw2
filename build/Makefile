@@ -116,6 +116,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named game
+
+# Build rule for target.
+game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 game
+.PHONY : game
+
+# fast build rule for target.
+game/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/build
+.PHONY : game/fast
+
+#=============================================================================
+# Target rules for targets named board
+
+# Build rule for target.
+board: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 board
+.PHONY : board
+
+# fast build rule for target.
+board/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/build
+.PHONY : board/fast
+
+#=============================================================================
+# Target rules for targets named partA_group_test
+
+# Build rule for target.
+partA_group_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 partA_group_test
+.PHONY : partA_group_test
+
+# fast build rule for target.
+partA_group_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\partA_group_test.dir\build.make CMakeFiles/partA_group_test.dir/build
+.PHONY : partA_group_test/fast
+
+#=============================================================================
 # Target rules for targets named part_a
 
 # Build rule for target.
@@ -143,6 +182,159 @@ part_a/part_a_test.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\part_a.dir\build.make CMakeFiles/part_a.dir/part_a/part_a_test.s
 .PHONY : part_a/part_a_test.s
 
+# target to build an object file
+part_a/test_from_group.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\partA_group_test.dir\build.make CMakeFiles/partA_group_test.dir/part_a/test_from_group.obj
+.PHONY : part_a/test_from_group.obj
+
+# target to preprocess a source file
+part_a/test_from_group.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\partA_group_test.dir\build.make CMakeFiles/partA_group_test.dir/part_a/test_from_group.i
+.PHONY : part_a/test_from_group.i
+
+# target to generate assembly for a file
+part_a/test_from_group.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\partA_group_test.dir\build.make CMakeFiles/partA_group_test.dir/part_a/test_from_group.s
+.PHONY : part_a/test_from_group.s
+
+# target to build an object file
+part_b/Auxiliaries.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.obj
+.PHONY : part_b/Auxiliaries.obj
+
+# target to preprocess a source file
+part_b/Auxiliaries.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.i
+.PHONY : part_b/Auxiliaries.i
+
+# target to generate assembly for a file
+part_b/Auxiliaries.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Auxiliaries.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/Auxiliaries.s
+.PHONY : part_b/Auxiliaries.s
+
+# target to build an object file
+part_b/Character.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.obj
+.PHONY : part_b/Character.obj
+
+# target to preprocess a source file
+part_b/Character.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.i
+.PHONY : part_b/Character.i
+
+# target to generate assembly for a file
+part_b/Character.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Character.s
+.PHONY : part_b/Character.s
+
+# target to build an object file
+part_b/Game.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.obj
+.PHONY : part_b/Game.obj
+
+# target to preprocess a source file
+part_b/Game.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.i
+.PHONY : part_b/Game.i
+
+# target to generate assembly for a file
+part_b/Game.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Game.s
+.PHONY : part_b/Game.s
+
+# target to build an object file
+part_b/Medic.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.obj
+.PHONY : part_b/Medic.obj
+
+# target to preprocess a source file
+part_b/Medic.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.i
+.PHONY : part_b/Medic.i
+
+# target to generate assembly for a file
+part_b/Medic.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Medic.s
+.PHONY : part_b/Medic.s
+
+# target to build an object file
+part_b/Sniper.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.obj
+.PHONY : part_b/Sniper.obj
+
+# target to preprocess a source file
+part_b/Sniper.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.i
+.PHONY : part_b/Sniper.i
+
+# target to generate assembly for a file
+part_b/Sniper.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Sniper.s
+.PHONY : part_b/Sniper.s
+
+# target to build an object file
+part_b/Soldier.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.obj
+.PHONY : part_b/Soldier.obj
+
+# target to preprocess a source file
+part_b/Soldier.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.i
+.PHONY : part_b/Soldier.i
+
+# target to generate assembly for a file
+part_b/Soldier.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/Soldier.s
+.PHONY : part_b/Soldier.s
+
+# target to build an object file
+part_b/TIleItem.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.obj
+.PHONY : part_b/TIleItem.obj
+
+# target to preprocess a source file
+part_b/TIleItem.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.i
+.PHONY : part_b/TIleItem.i
+
+# target to generate assembly for a file
+part_b/TIleItem.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/TIleItem.s
+.PHONY : part_b/TIleItem.s
+
+# target to build an object file
+part_b/board_test.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.obj
+.PHONY : part_b/board_test.obj
+
+# target to preprocess a source file
+part_b/board_test.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.i
+.PHONY : part_b/board_test.i
+
+# target to generate assembly for a file
+part_b/board_test.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board.dir\build.make CMakeFiles/board.dir/part_b/board_test.s
+.PHONY : part_b/board_test.s
+
+# target to build an object file
+part_b/game_test.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.obj
+.PHONY : part_b/game_test.obj
+
+# target to preprocess a source file
+part_b/game_test.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.i
+.PHONY : part_b/game_test.i
+
+# target to generate assembly for a file
+part_b/game_test.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/part_b/game_test.s
+.PHONY : part_b/game_test.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -151,10 +343,43 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... board
+	@echo ... game
+	@echo ... partA_group_test
 	@echo ... part_a
 	@echo ... part_a/part_a_test.obj
 	@echo ... part_a/part_a_test.i
 	@echo ... part_a/part_a_test.s
+	@echo ... part_a/test_from_group.obj
+	@echo ... part_a/test_from_group.i
+	@echo ... part_a/test_from_group.s
+	@echo ... part_b/Auxiliaries.obj
+	@echo ... part_b/Auxiliaries.i
+	@echo ... part_b/Auxiliaries.s
+	@echo ... part_b/Character.obj
+	@echo ... part_b/Character.i
+	@echo ... part_b/Character.s
+	@echo ... part_b/Game.obj
+	@echo ... part_b/Game.i
+	@echo ... part_b/Game.s
+	@echo ... part_b/Medic.obj
+	@echo ... part_b/Medic.i
+	@echo ... part_b/Medic.s
+	@echo ... part_b/Sniper.obj
+	@echo ... part_b/Sniper.i
+	@echo ... part_b/Sniper.s
+	@echo ... part_b/Soldier.obj
+	@echo ... part_b/Soldier.i
+	@echo ... part_b/Soldier.s
+	@echo ... part_b/TIleItem.obj
+	@echo ... part_b/TIleItem.i
+	@echo ... part_b/TIleItem.s
+	@echo ... part_b/board_test.obj
+	@echo ... part_b/board_test.i
+	@echo ... part_b/board_test.s
+	@echo ... part_b/game_test.obj
+	@echo ... part_b/game_test.i
+	@echo ... part_b/game_test.s
 .PHONY : help
 
 
