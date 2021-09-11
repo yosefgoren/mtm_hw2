@@ -57,7 +57,7 @@ int ExamDetails::operator-(const ExamDetails& other) const{
     return MAX_DAY*(month - other.month) + day - other.day;
 }
 
-bool operator<(const ExamDetails& first, const ExamDetails& second){ //changed to non-member function
+bool operator<(const ExamDetails& first, const ExamDetails& second){
     return first-second < 0;
 }
 

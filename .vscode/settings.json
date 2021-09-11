@@ -41,7 +41,13 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "ranges": "cpp"
+    "ranges": "cpp",
+    "bit": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "map": "cpp",
+    "numeric": "cpp",
+    "random": "cpp"
   },
   "C_Cpp_Runner.warnings": [
     "-Wall",

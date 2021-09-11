@@ -6,6 +6,7 @@
 #include<iostream>
 #include<assert.h>
 
+
 namespace mtm{
     
     template<class T>
@@ -16,13 +17,13 @@ namespace mtm{
             T* data;
             Node* next;
             Node* prev;
+            void cloneList(Node* source_list, int size); 
+            Node* getNodeBefore(T new_item); 
             friend class SortedList;
 
             public:
             Node() : data(NULL), next(NULL), prev(NULL) {}
             ~Node() = default;
-            void cloneList(Node* source_list, int size);
-            Node* getNodeBefore(T new_item);
          };
 
         Node* list_head;
@@ -38,14 +39,17 @@ namespace mtm{
             SortedList& operator=(const SortedList& source); 
             unsigned int length() const; 
             void insert(const T& new_item); 
+            class const_iterator;
             SortedList& remove( typename SortedList::const_iterator it); 
             template<class Predicate>
             SortedList filter(Predicate c) const; 
-            template<class R , class Mapper>
-            SortedList<R> apply(Mapper c); 
-            class const_iterator;
+            template<class Mapper>
+            SortedList apply(Mapper mapper); 
             typename SortedList<T>::const_iterator begin() const; 
             typename SortedList<T>::const_iterator end() const; 
+
+
+
     };
 
     // Node functions:
@@ -55,7 +59,7 @@ namespace mtm{
         SortedList<T>::Node* dest_list = this;
         for(int i = 0 ; i < size; i++){
             // Copy current Data 
-             *(dest_list->data) = *(source_list->data) ;
+             dest_list->data = new T(source_list->data) ;
             // Create and link next Node
             if(i != size - 1 ){ // Do not create next node if we are at the last node.
                 SortedList<T>::Node* new_node = new Node();
@@ -72,7 +76,7 @@ namespace mtm{
     typename SortedList<T>::Node* SortedList<T>::Node::getNodeBefore(T new_item){
         SortedList<T>::Node* current = this;
         SortedList<T>::Node* previous = NULL; 
-        while(current != NULL && *(current->data) < new_item){
+        while(current != NULL && *(current->data) < new_item){ //possible segmentation fault
             previous = current;
             current = current->next;
         }
@@ -122,7 +126,7 @@ namespace mtm{
     template<class T>
     SortedList<T>::SortedList(const SortedList<T>& source) : 
     list_head(new Node()), size(source.size){
-            this->list_head->cloneList(source.list_head, size); //unknown error
+            this->list_head->cloneList(source.list_head, size); 
     }
 
     /**Assignment Operator*/
@@ -134,7 +138,7 @@ namespace mtm{
         deallocate();
         size = source.size;
         list_head = new Node(); 
-        this->list_head->cloneList(source.list_head, source.size); //unknown error
+        this->list_head->cloneList(source.list_head, source.size); 
         return *this;
     }
 
@@ -146,14 +150,14 @@ namespace mtm{
     template<class T>
     void SortedList<T>::insert(const T& new_item){
         if(size == 0){ //empty list case
-            *(this->list_head->data) = new_item;
+            this->list_head->data = new T(new_item);
             size++;
             return;
         }
         SortedList<T>::Node* new_node = new Node();
         *(new_node->data) = new_item;
 
-        SortedList<T>::Node* node_before = this->list_head->getNodeBefore(new_item); // unknown error
+        SortedList<T>::Node* node_before = this->list_head->getNodeBefore(new_item); 
 
         if(node_before == NULL){
             new_node->next = list_head;
@@ -192,7 +196,7 @@ namespace mtm{
     template<class T>
     template<class Predicate>
     SortedList<T> SortedList<T>::filter(Predicate c) const{
-        SortedList<T> result();
+        SortedList<T> result;
         for(typename SortedList<T>::const_iterator it = begin(); !(it == end()); ++it){
             if (c(*it)) { 
                 result.insert(*it); 
@@ -202,11 +206,11 @@ namespace mtm{
     }
 
     template<class T>
-    template<class R , class Mapper>
-    SortedList<R> SortedList<T>::apply(Mapper mapper){
-        SortedList<R> result();
+    template<class Mapper>
+    SortedList<T> SortedList<T>::apply(Mapper mapper){
+        SortedList<T> result;
         for(typename SortedList<T>::const_iterator it = begin(); !(it == end()); ++it){
-            R applied = mapper(*it);
+            T applied = mapper(*it);
             result.insert(applied);
         }
         return result;
@@ -231,12 +235,13 @@ namespace mtm{
         friend class SortedList<T>;
 
         public:
-        ~const_iterator() = default; 
         const_iterator(const const_iterator& source); 
         const_iterator& operator=(const const_iterator& source); 
+        ~const_iterator() = default; 
 
         /**===Overloaded Operators===*/
-        const_iterator& operator++(); 
+        const_iterator& operator++();
+        const_iterator operator++(int);
         bool operator==(const const_iterator& it) const; 
         const T& operator*();
     };
@@ -261,12 +266,26 @@ namespace mtm{
         return *this;
     }
 
+    /** Prefix operator++ */
     template<class T>
     typename SortedList<T>::const_iterator& 
     SortedList<T>::const_iterator::operator++(){
+        if( index == sorted_list->size ){
+            throw std::out_of_range("out of range");
+        }  
         ++index;
         return *this;
     }
+
+    /** Postfix operator++ */
+    template<class T>
+    typename SortedList<T>::const_iterator 
+    SortedList<T>::const_iterator::operator++(int){
+        const_iterator result = *this;
+        ++(*this);
+        return result;
+    }
+
 
     template<class T>
     bool SortedList<T>::const_iterator::operator==(const const_iterator& it) const{

@@ -94,7 +94,7 @@ TestClass funky(TestClass d)
 
 void listTest1()
 {
-    cout << "Running test1 - basics1... ";
+    cout << "Running test1 -  cs1... ";
     SortedList<int> list1 = SortedList<int>();
     //int x = list1.length();
     //cout << x;
@@ -435,7 +435,7 @@ void listTest4()
     assert(list1.length() == 8);
 
 
-    list2 = list1.apply(subtract3Multiply2);
+    list2 = list1.apply(subtract3Multiply2); 
     iter = list2.begin();
     assert(*(iter++) == -12);
     assert(*(iter++) == -8);

@@ -14,7 +14,6 @@ namespace mtm{
 
     class ExamDetails{  
     public:
-        ExamDetails() = default;
         ExamDetails(int course_number, unsigned int month, unsigned int day,
             double hour, unsigned int duration, std::string zoom_link = "");
 
@@ -28,6 +27,8 @@ namespace mtm{
         void setLink(const std::string& new_link);
         int operator-(const ExamDetails& other) const;
         static ExamDetails makeMatamExam(); 
+        friend ostream& operator<<(ostream& os, const ExamDetails& details);
+
 
         static constexpr unsigned int MIN_MONTH = 1;
         static constexpr unsigned int MAX_MONTH = 12;
@@ -44,9 +45,10 @@ namespace mtm{
         std::string zoom_link;
 
         static std::string hourToString(double hour);
-        friend ostream& operator<<(ostream& os, const ExamDetails& details);
 
     };
+
+    bool operator<(const ExamDetails& first, const ExamDetails& second);
 
     ostream& operator<<(ostream& os, const ExamDetails& details)
     { 
