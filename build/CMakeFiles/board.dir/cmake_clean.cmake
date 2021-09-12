@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/board.dir/part_b/Auxiliaries.obj"
-  "CMakeFiles/board.dir/part_b/Auxiliaries.obj.d"
   "CMakeFiles/board.dir/part_b/board_test.obj"
-  "CMakeFiles/board.dir/part_b/board_test.obj.d"
+  "CMakeFiles/board.dir/part_b/Auxiliaries.obj"
+  "board.pdb"
   "board.exe"
   "board.exe.manifest"
-  "board.pdb"
   "libboard.dll.a"
 )
 

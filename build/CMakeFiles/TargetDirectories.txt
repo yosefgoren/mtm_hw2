@@ -1,6 +1,6 @@
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/game.dir
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/board.dir
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/edit_cache.dir
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/partA_group_test.dir
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/part_a.dir
-C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/build/CMakeFiles/rebuild_cache.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/board.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/edit_cache.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/partA_group_test.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/part_a.dir
+C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/rebuild_cache.dir

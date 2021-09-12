@@ -11,7 +11,6 @@ using std::exception;
 using std::ostream;
 
 namespace mtm{
-
     class ExamDetails{  
     public:
         ExamDetails(int course_number, unsigned int month, unsigned int day,
@@ -49,17 +48,6 @@ namespace mtm{
     };
 
     bool operator<(const ExamDetails& first, const ExamDetails& second);
-
-    ostream& operator<<(ostream& os, const ExamDetails& details)
-    { 
-        os << "Course Number: " <<  details.course_number << endl;
-        os << "Time: " << details.day << "." << details.month << " at " 
-        << ExamDetails::hourToString(details.hour) << endl; 
-
-        os << "Duration: " << ExamDetails::hourToString((double)details.duration) << endl; 
-        os << "Zoom Link: " << details.zoom_link << endl;
-        return os;
-    }
 }
 
 #endif

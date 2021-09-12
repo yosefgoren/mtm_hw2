@@ -1,21 +1,22 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Auxiliaries.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Character.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Game.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Medic.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Sniper.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Soldier.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/TileItem.obj"
+  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/game_test.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/game_test.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Auxiliaries.cpp" "CMakeFiles/game.dir/part_b/Auxiliaries.obj" "gcc" "CMakeFiles/game.dir/part_b/Auxiliaries.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Character.cpp" "CMakeFiles/game.dir/part_b/Character.obj" "gcc" "CMakeFiles/game.dir/part_b/Character.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Game.cpp" "CMakeFiles/game.dir/part_b/Game.obj" "gcc" "CMakeFiles/game.dir/part_b/Game.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Medic.cpp" "CMakeFiles/game.dir/part_b/Medic.obj" "gcc" "CMakeFiles/game.dir/part_b/Medic.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Sniper.cpp" "CMakeFiles/game.dir/part_b/Sniper.obj" "gcc" "CMakeFiles/game.dir/part_b/Sniper.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/Soldier.cpp" "CMakeFiles/game.dir/part_b/Soldier.obj" "gcc" "CMakeFiles/game.dir/part_b/Soldier.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/TIleItem.cpp" "CMakeFiles/game.dir/part_b/TIleItem.obj" "gcc" "CMakeFiles/game.dir/part_b/TIleItem.obj.d"
-  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_b/game_test.cpp" "CMakeFiles/game.dir/part_b/game_test.obj" "gcc" "CMakeFiles/game.dir/part_b/game_test.obj.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # Targets to which this target links.

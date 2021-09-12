@@ -29,7 +29,7 @@ namespace mtm{
         Node* list_head;
         unsigned int size;
 
-        bool operator==(const SortedList& other) const; //Internal usage only (unrequired)
+        bool operator==(const SortedList& other) const; //Internal usage only not required by assignment.
         void deallocate(); 
 
         public:
@@ -47,10 +47,17 @@ namespace mtm{
             SortedList apply(Mapper mapper); 
             typename SortedList<T>::const_iterator begin() const; 
             typename SortedList<T>::const_iterator end() const; 
-
-
-
     };
+
+    // Class T functions:
+
+    /**
+     function compares two T values
+     returns true if they are equal */
+    template<class T>
+    static bool isEqual(const T& first, const T& second){
+        return !(first < second) && !(second < first);
+    }
 
     // Node functions:
      
@@ -59,7 +66,7 @@ namespace mtm{
         SortedList<T>::Node* dest_list = this;
         for(int i = 0 ; i < size; i++){
             // Copy current Data 
-             dest_list->data = new T(*(source_list->data)) ;
+            dest_list->data = new T(*(source_list->data));
             // Create and link next Node
             if(i != size - 1 ){ // Do not create next node if we are at the last node.
                 SortedList<T>::Node* new_node = new Node();
@@ -76,7 +83,7 @@ namespace mtm{
     typename SortedList<T>::Node* SortedList<T>::Node::getNodeBefore(T new_item){
         SortedList<T>::Node* current = this;
         SortedList<T>::Node* previous = NULL; 
-        while(current != NULL && *(current->data) < new_item){ 
+        while(current != NULL && *(current->data) < new_item){
             previous = current;
             current = current->next;
         }
@@ -103,7 +110,7 @@ namespace mtm{
         SortedList<T>::Node* list1_ptr = list_head;
         SortedList<T>::Node* list2_ptr = other->list_head;
         while(list1_ptr != NULL){
-            if( !( *(list1_ptr->data) == *(list2_ptr->data) ) ){
+            if(!isEqual(*(list1_ptr->data),*(list2_ptr->data))){
                 return false;
             }
             list1_ptr = list1_ptr->next;
@@ -186,11 +193,11 @@ namespace mtm{
 
     template<class T>
     SortedList<T>& SortedList<T>::remove( typename SortedList<T>::const_iterator it){
-        if(list_head == NULL || list_head->data == NULL ){
+        if(list_head== NULL || list_head->data == NULL ){
             return *this;
         }
 
-        if( *it == *(list_head->data) ) { //First item in list
+        if( isEqual(*it , *(list_head->data) )) { //First item in list
             SortedList<T>::Node* temp = list_head->next;
             delete list_head;
             list_head = temp;
@@ -323,13 +330,6 @@ namespace mtm{
     }
     return *(list_ptr->data);
     }
-
-
-
-
-
-
-
 }
 
 #endif
