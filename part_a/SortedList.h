@@ -59,7 +59,7 @@ namespace mtm{
         SortedList<T>::Node* dest_list = this;
         for(int i = 0 ; i < size; i++){
             // Copy current Data 
-             dest_list->data = new T(source_list->data) ;
+             dest_list->data = new T(*(source_list->data)) ;
             // Create and link next Node
             if(i != size - 1 ){ // Do not create next node if we are at the last node.
                 SortedList<T>::Node* new_node = new Node();
@@ -76,7 +76,7 @@ namespace mtm{
     typename SortedList<T>::Node* SortedList<T>::Node::getNodeBefore(T new_item){
         SortedList<T>::Node* current = this;
         SortedList<T>::Node* previous = NULL; 
-        while(current != NULL && *(current->data) < new_item){ //possible segmentation fault
+        while(current != NULL && *(current->data) < new_item){ 
             previous = current;
             current = current->next;
         }
@@ -103,7 +103,7 @@ namespace mtm{
         SortedList<T>::Node* list1_ptr = list_head;
         SortedList<T>::Node* list2_ptr = other->list_head;
         while(list1_ptr != NULL){
-            if(*(list1_ptr->data) != *(list2_ptr->data)){
+            if( !( *(list1_ptr->data) == *(list2_ptr->data) ) ){
                 return false;
             }
             list1_ptr = list1_ptr->next;
@@ -149,13 +149,19 @@ namespace mtm{
 
     template<class T>
     void SortedList<T>::insert(const T& new_item){
-        if(size == 0){ //empty list case
-            this->list_head->data = new T(new_item);
+
+        if(list_head == NULL){
+           list_head = new Node(); 
+        }
+
+        if(size == 0){ //Empty list case
+            this->list_head->data = new T(new_item); 
             size++;
             return;
         }
+
         SortedList<T>::Node* new_node = new Node();
-        *(new_node->data) = new_item;
+        new_node->data = new T(new_item); 
 
         SortedList<T>::Node* node_before = this->list_head->getNodeBefore(new_item); 
 
@@ -180,6 +186,18 @@ namespace mtm{
 
     template<class T>
     SortedList<T>& SortedList<T>::remove( typename SortedList<T>::const_iterator it){
+        if(list_head == NULL || list_head->data == NULL ){
+            return *this;
+        }
+
+        if( *it == *(list_head->data) ) { //First item in list
+            SortedList<T>::Node* temp = list_head->next;
+            delete list_head;
+            list_head = temp;
+            size--;
+            return *this;
+        }
+
         SortedList<T>::Node* node_before = list_head->getNodeBefore(*it);
         SortedList<T>::Node* node_after = node_before->next->next;
         delete node_before->next;
@@ -190,6 +208,7 @@ namespace mtm{
         if(node_after != NULL){
             node_after->prev = node_before;
         }
+        size--;
         return *this;
     }
 

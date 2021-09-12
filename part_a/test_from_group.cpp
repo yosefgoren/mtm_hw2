@@ -92,6 +92,15 @@ TestClass funky(TestClass d)
     return externalConstructor(d.x * (d.x - 13), 0);
 }
 
+template<class T>
+void printList(SortedList<T> list) {
+    cout << endl;
+    for (auto it = list.begin(); !(it == list.end()); ++it) {
+        cout << *it << endl;
+    }
+    cout << endl;
+}
+
 void listTest1()
 {
     cout << "Running test1 -  cs1... ";
@@ -111,7 +120,6 @@ void listTest1()
     list1.insert(3);
     list1.insert(9);
     list1.insert(10);
-
 
     cout << "[OK]" << endl;
 }
@@ -133,7 +141,6 @@ void listTest2()
     list1.insert(3);
     list1.insert(9);
     list1.insert(8);
-
     // Check insert and iterator
     SortedList<int>::const_iterator iter = list1.begin();
     assert(*(iter++) == 1);
@@ -284,8 +291,8 @@ void listTest2()
     assert(*(iter++) == 5);
     assert(iter == list3.end());
 
-//    try { iter++; }
-//    catch(std::out_of_range& err) {}
+   try { iter++; }
+   catch(std::out_of_range& err) {}
 
     list3 = list1;
     iter = list3.begin();
@@ -11805,7 +11812,7 @@ void listTest11()
     cout << "Running test11- extra1... ";
     SortedList<int> list1 = SortedList<int>();
     SortedList<int> list2 = SortedList<int>();
-
+    list1.remove(list1.begin());
 //    try { list1.remove(list1.begin()); }
 //    catch (std::out_of_range& e) {}
     assert(list1.length() == 0);

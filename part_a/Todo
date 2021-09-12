@@ -1,7 +1,7 @@
 
 should apply&filter use std::function or object functions? =  answer: objects.
 postfix or prefix operator++? in const_iterator = answer: BOTH.
-can we assume T has a copy ctor?
+can we assume T has a copy ctor? = answer: yes
 
 
 
