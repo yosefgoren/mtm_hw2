@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Auxiliaries.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Character.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Game.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Medic.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Sniper.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Soldier.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/TileItem.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/game_test.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/game_test.obj"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Auxiliaries.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Auxiliaries.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Character.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Character.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Game.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Game.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Medic.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Medic.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Sniper.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Sniper.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/Soldier.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/Soldier.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/TileItem.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/TileItem.o"
+  "/home/yosef/Matam/hw2/mtm_hw2/part_b/game_test.cpp" "/home/yosef/Matam/hw2/mtm_hw2/build/CMakeFiles/game.dir/part_b/game_test.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

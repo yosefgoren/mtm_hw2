@@ -1,72 +1,72 @@
 [
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\game_test.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\game_test.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/game_test.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/partA_group_test.dir/part_a/test_from_group.o -c /home/yosef/Matam/hw2/mtm_hw2/part_a/test_from_group.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_a/test_from_group.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Auxiliaries.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Auxiliaries.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/partA_group_test.dir/part_a/examDetails.o -c /home/yosef/Matam/hw2/mtm_hw2/part_a/examDetails.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_a/examDetails.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Game.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Game.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Game.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/part_a.dir/part_a/part_a_test.o -c /home/yosef/Matam/hw2/mtm_hw2/part_a/part_a_test.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_a/part_a_test.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\TileItem.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\TileItem.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/TileItem.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/part_a.dir/part_a/examDetails.o -c /home/yosef/Matam/hw2/mtm_hw2/part_a/examDetails.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_a/examDetails.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Character.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Character.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Character.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/game_test.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/game_test.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/game_test.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Soldier.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Soldier.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Soldier.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Auxiliaries.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Auxiliaries.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Auxiliaries.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Medic.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Medic.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Medic.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Game.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Game.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Game.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\game.dir\\part_b\\Sniper.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Sniper.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Sniper.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/TileItem.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/TileItem.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/TileItem.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\board.dir\\part_b\\board_test.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\board_test.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/board_test.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Character.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Character.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Character.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\board.dir\\part_b\\Auxiliaries.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_b\\Auxiliaries.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_b/Auxiliaries.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Soldier.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Soldier.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Soldier.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\partA_group_test.dir\\part_a\\test_from_group.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_a\\test_from_group.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/test_from_group.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Medic.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Medic.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Medic.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\partA_group_test.dir\\part_a\\examDetails.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_a\\examDetails.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/game.dir/part_b/Sniper.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Sniper.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Sniper.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\part_a.dir\\part_a\\part_a_test.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_a\\part_a_test.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/part_a_test.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/board.dir/part_b/board_test.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/board_test.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/board_test.cpp"
 },
 {
-  "directory": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build",
-  "command": "C:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles\\part_a.dir\\part_a\\examDetails.obj -c C:\\Users\\pc\\Desktop\\S4.5\\Matam_Take2\\hw2\\mtm_hw2\\part_a\\examDetails.cpp",
-  "file": "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.cpp"
+  "directory": "/home/yosef/Matam/hw2/mtm_hw2/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7    -g   -std=c++11 -Wall -Werror -pedantic-errors -DNDEBUG -o CMakeFiles/board.dir/part_b/Auxiliaries.o -c /home/yosef/Matam/hw2/mtm_hw2/part_b/Auxiliaries.cpp",
+  "file": "/home/yosef/Matam/hw2/mtm_hw2/part_b/Auxiliaries.cpp"
 }
 ]

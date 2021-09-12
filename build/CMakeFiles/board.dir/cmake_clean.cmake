@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/board.dir/part_b/board_test.obj"
-  "CMakeFiles/board.dir/part_b/Auxiliaries.obj"
+  "CMakeFiles/board.dir/part_b/board_test.o"
+  "CMakeFiles/board.dir/part_b/Auxiliaries.o"
   "board.pdb"
-  "board.exe"
-  "board.exe.manifest"
-  "libboard.dll.a"
+  "board"
 )
 
 # Per-language clean rules from dependency scanning.

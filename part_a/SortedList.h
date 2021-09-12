@@ -23,7 +23,11 @@ namespace mtm{
 
             public:
             Node() : data(NULL), next(NULL), prev(NULL) {}
-            ~Node() = default;
+            ~Node(){
+                if(data != NULL){
+                    delete data;
+                }
+            }
          };
 
         Node* list_head;
