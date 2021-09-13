@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7  -g  -rdynamic CMakeFiles/game.dir/part_b/game_test.o CMakeFiles/game.dir/part_b/Auxiliaries.o CMakeFiles/game.dir/part_b/Game.o CMakeFiles/game.dir/part_b/TileItem.o CMakeFiles/game.dir/part_b/Character.o CMakeFiles/game.dir/part_b/Soldier.o CMakeFiles/game.dir/part_b/Medic.o CMakeFiles/game.dir/part_b/Sniper.o  -o game 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7  -g  -rdynamic CMakeFiles/part_a.dir/part_a/part_a_test.o CMakeFiles/part_a.dir/part_a/examDetails.o  -o part_a 

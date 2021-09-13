@@ -3,6 +3,7 @@
 
 #include <functional>
 #include <tuple>
+#include <vector>
 
 template <class ObjectClass, class ResultType, class ... TupleTypes, class VectorBackType, class ... VectorTypes>
 ResultType invokeWith(ObjectClass* obj, 

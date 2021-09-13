@@ -5,7 +5,6 @@
 #include "Generator.h"
 #include "InvocationGenerator.h"
 #include "PtrArray.h"
-#include "IntRangeGenerator.h"
 
 template<int SizeOfGroup>
 class GenericGroupComparisonGenerator : public Generator<bool>{
@@ -17,11 +16,7 @@ public:
             ,second_generator_set(second_generator_set)
             ,index_generator(index_generator)
             ,compare_stdout_sel(compare_stdout)
-            ,compare_stderr_sel(compare_stderr){
-        // if(index_generator == nullptr){
-        //     index_generator = new IntRangeGenearator(0, SizeOfGroup);
-        // }
-    }
+            ,compare_stderr_sel(compare_stderr){}
 
     virtual bool get() override{
         int comparison_index = index_generator->get();

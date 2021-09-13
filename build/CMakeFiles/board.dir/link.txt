@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7  -g  -rdynamic CMakeFiles/board.dir/part_b/board_test.o CMakeFiles/board.dir/part_b/Auxiliaries.o  -o board 
