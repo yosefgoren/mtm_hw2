@@ -6,7 +6,6 @@
 #include<iostream>
 #include<assert.h>
 
-
 namespace mtm{
     
     template<class T>
