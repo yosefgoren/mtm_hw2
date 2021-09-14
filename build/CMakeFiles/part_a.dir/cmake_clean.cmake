@@ -1,10 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/part_a.dir/part_a/part_a_test.obj"
   "CMakeFiles/part_a.dir/part_a/examDetails.obj"
-  "part_a.pdb"
+  "CMakeFiles/part_a.dir/part_a/examDetails.obj.d"
+  "CMakeFiles/part_a.dir/part_a/part_a_test.obj"
+  "CMakeFiles/part_a.dir/part_a/part_a_test.obj.d"
+  "libpart_a.dll.a"
   "part_a.exe"
   "part_a.exe.manifest"
-  "libpart_a.dll.a"
+  "part_a.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

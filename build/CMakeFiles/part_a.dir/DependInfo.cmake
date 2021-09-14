@@ -1,16 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/examDetails.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/part_a.dir/part_a/examDetails.obj"
-  "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/part_a/part_a_test.cpp" "C:/Users/pc/Desktop/S4.5/Matam_Take2/hw2/mtm_hw2/build/CMakeFiles/part_a.dir/part_a/part_a_test.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_a/examDetails.cpp" "CMakeFiles/part_a.dir/part_a/examDetails.obj" "gcc" "CMakeFiles/part_a.dir/part_a/examDetails.obj.d"
+  "C:/Users/Sharbel/Desktop/matam/new_hw2/mtm_hw2/part_a/part_a_test.cpp" "CMakeFiles/part_a.dir/part_a/part_a_test.obj" "gcc" "CMakeFiles/part_a.dir/part_a/part_a_test.obj.d"
   )
 
 # Targets to which this target links.

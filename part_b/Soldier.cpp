@@ -23,8 +23,8 @@ namespace mtm{
 
     vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point, TileItem& target) const{
         const GridPoint& target_point = target.getLocation();
-        if(!(src_point.row == target_point.row || src_point.col == target_point.col)
-                ||  GridPoint::distance(src_point, target_point) <= range){
+        if(!( (src_point.row == target_point.row || src_point.col == target_point.col) 
+				&& GridPoint::distance(src_point, target_point) <= range) ){
             throw OutOfRange();
         }
         if(ammo == 0){
