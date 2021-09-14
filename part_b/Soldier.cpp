@@ -23,7 +23,8 @@ namespace mtm{
 
     vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point, TileItem& target) const{
         const GridPoint& target_point = target.getLocation();
-        if(!( (src_point.row == target_point.row || src_point.col == target_point.col) 
+        // NEED TO CHANGE: not same row or column shoud not throw out of range.
+        if(!( (src_point.row == target_point.row || src_point.col == target_point.col)
 				&& GridPoint::distance(src_point, target_point) <= range) ){
             throw OutOfRange();
         }
@@ -49,6 +50,7 @@ namespace mtm{
             assert(!tile);
             assert(!tile->tileEmpty());
             Character& targeted_character = *(tile->getCharacter());
+        
             if(targeted_character.team != team){
                 targeted_character.health -= (tile->getLocation() == target_point ? power : partial_damage);
                 tile->cleanIfDead();

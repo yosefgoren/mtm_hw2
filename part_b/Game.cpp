@@ -54,7 +54,7 @@ namespace mtm{
                 attacker.coordinatesAffectedByAttack(src_coordinates, target_tile);
         vector<TileItem*> affected_tiles;
         for(const GridPoint& coordinate : affected_coordiantes){
-            if(positionWithinBoard(coordinate)){
+            if(positionWithinBoard(coordinate) && !((&(*this)(coordinate))->tileEmpty()) ){
                 affected_tiles.push_back(&(*this)(coordinate));
             }
         }

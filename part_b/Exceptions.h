@@ -13,11 +13,13 @@ namespace mtm
     #define CREATE_EXCEPTION(NAME)\
     class NAME : public Exception{\
     public:\
+        NAME():msg(std::string("A game related error has occurred: ") + std::string(#NAME)){}\
         virtual const char* what() const noexcept override{\
-            return (std::string("A game related error has occurred: ")\
-                + std::string(#NAME)).c_str();\
+            return msg.c_str();\
         }\
+        std::string msg; \
     };
+
     CREATE_EXCEPTION(IllegalArgument)
     CREATE_EXCEPTION(IllegalCell)
     CREATE_EXCEPTION(CellEmpty)
