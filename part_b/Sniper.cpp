@@ -17,18 +17,17 @@ namespace mtm{
     int Sniper::maxMoveDistance() const noexcept{
         return 4;
     }
-    vector<GridPoint> Sniper::coordinatesAffectedByAttack(const GridPoint& src_point,
-                TileItem& target) const{
-        int distance = GridPoint::distance(src_point, target.getLocation());
-        if(distance > range || distance < ceil((double)range / 2.0)){
-            throw OutOfRange();
-        }
-        if(ammo == 0){
-            throw OutOfAmmo();
-        }
-        if(target.tileEmpty() || target.getCharacter()->team == team){
-            throw IllegalTarget();
-        }
+    bool Sniper::inAttackRange(const GridPoint& attacking_position, const TileItem& tile) const{
+        int distance = GridPoint::distance(attacking_position, tile.getLocation());
+        return !(distance > range || distance < ceil((double)range / 2.0));
+    }
+    
+    bool Sniper::targetIsLegal(const GridPoint& attacking_position, const TileItem& tile) const{
+        return !tile.tileEmpty() && tile.getTeam() != team;
+    }
+
+    vector<GridPoint> Sniper::coordinatesAffectedByAttack(const GridPoint& src_point
+            , TileItem& target) const{
         vector<GridPoint> result;
         result.push_back(target.getLocation());
         return result;

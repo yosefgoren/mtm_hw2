@@ -10,6 +10,7 @@ namespace mtm{
         virtual char getSymbol() const noexcept override;
         virtual Character* clone() const override;
         virtual int maxMoveDistance() const noexcept override;
+        virtual bool targetIsLegal(const GridPoint& attacking_position, const TileItem& tile) const override;
         virtual std::vector<GridPoint> coordinatesAffectedByAttack(const GridPoint& src_point, 
                 TileItem& target) const override;
         virtual void executeAttack(std::vector<TileItem*> targeted_tiles,

@@ -21,18 +21,17 @@ namespace mtm{
         return ceil((double)numerator / (double)denominator);
     }
 
-    vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point, TileItem& target) const{
+    bool Soldier::targetIsLegal(const GridPoint& attacking_position, const TileItem& tile) const{
+        return attacking_position.row == tile.getLocation().row 
+                || attacking_position.col == tile.getLocation().col;
+    }
+
+    vector<GridPoint> Soldier::coordinatesAffectedByAttack(const GridPoint& src_point
+            , TileItem& target) const{
         const GridPoint& target_point = target.getLocation();
-        // NEED TO CHANGE: not same row or column shoud not throw out of range.
-        if(!( (src_point.row == target_point.row || src_point.col == target_point.col)
-				&& GridPoint::distance(src_point, target_point) <= range) ){
-            throw OutOfRange();
-        }
-        if(ammo == 0){
-            throw OutOfAmmo();
-        }
         vector<GridPoint> result = vector<GridPoint>();
         int splash_distance = roundUp(range, 3);
+
         for(int dy = -splash_distance; dy <= splash_distance; ++dy){
             for(int dx = -splash_distance; dx <= splash_distance; ++dx){
                 GridPoint point(target_point.row + dy, target_point.col + dx);

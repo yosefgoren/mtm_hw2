@@ -20,8 +20,9 @@ namespace mtm{
         bool canMoveThere(const GridPoint& src_point, const GridPoint& dst_point) const;
         virtual int maxMoveDistance() const noexcept = 0;
     
-        virtual bool hasAmmoToAttack(const TileItem& tile);
-
+        virtual bool hasAmmoToAttack(const TileItem& tile) const;
+        virtual bool inAttackRange(const GridPoint& attacking_position, const TileItem& tile) const;
+        virtual bool targetIsLegal(const GridPoint& attacking_position, const TileItem& tile) const = 0;
         /*
          * @return the set of coordinates that might be 
          * involved if the character will attack the 'target' tile from src_point.

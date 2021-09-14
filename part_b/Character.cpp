@@ -14,6 +14,15 @@ namespace mtm
     bool Character::canMoveThere(const GridPoint& src_point, const GridPoint& dst_point) const{
         return GridPoint::distance(src_point, dst_point) <= maxMoveDistance();
     }
+
+
+    bool Character::hasAmmoToAttack(const TileItem& tile) const{
+        return ammo > 0;
+    }
+    bool Character::inAttackRange(const GridPoint& attacking_position, const TileItem& tile) const{
+        return GridPoint::distance(attacking_position, tile.getLocation()) <= range;
+    }
+
     bool Character::shouldBeDead() const noexcept{
         return health <= 0;
     }

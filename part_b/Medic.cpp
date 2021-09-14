@@ -17,17 +17,17 @@ namespace mtm{
         return 5;
     }
 
+    bool Medic::hasAmmoToAttack(const TileItem& tile) const{
+        if(tile.getTeam() == team){
+            return true;
+        }
+        return Character::hasAmmoToAttack(tile);
+    }
+    bool Medic::targetIsLegal(const GridPoint& attacking_position, const TileItem& tile) const{
+        return !(tile.tileEmpty() || attacking_position == tile.getLocation());
+    }
     vector<GridPoint> Medic::coordinatesAffectedByAttack(const GridPoint& src_point,
                 TileItem& target) const{
-        if(GridPoint::distance(src_point, target.getLocation()) > range){
-            throw OutOfRange();
-        }
-        if(target.tileEmpty() || src_point == target.getLocation()){
-            throw IllegalTarget();
-        }
-        if(target.getCharacter()->team != team && ammo == 0){
-            throw OutOfAmmo();
-        }
         vector<GridPoint> result;
         result.push_back(target.getLocation());
         return result;

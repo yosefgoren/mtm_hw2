@@ -50,6 +50,16 @@ namespace mtm{
         }
         Character& attacker = *attacking_tile.getCharacter();
         TileItem& target_tile = (*this)(dst_coordinates);
+        if(!attacker.inAttackRange(src_coordinates, target_tile)){
+            throw OutOfRange();
+        }
+        if(!attacker.hasAmmoToAttack(target_tile)){
+            throw OutOfAmmo();
+        }
+        if(!attacker.targetIsLegal(src_coordinates, target_tile)){
+            throw IllegalTarget();
+        }
+
         vector<GridPoint> affected_coordiantes = 
                 attacker.coordinatesAffectedByAttack(src_coordinates, target_tile);
         vector<TileItem*> affected_tiles;
